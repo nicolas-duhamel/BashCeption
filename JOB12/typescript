@@ -1,0 +1,875 @@
+Script démarré sur 2024-03-13 09:45:14+01:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="80" LINES="24"]
+[?2004h]0;debian@debian: ~/JOB12[01;32mdebian@debian[00m:[01;34m~/JOB12[00m$ man scriptpt
+[?2004lAucune entrée de manuel pour scriptpt
+[?2004h]0;debian@debian: ~/JOB12[01;32mdebian@debian[00m:[01;34m~/JOB12[00m$ man scriptpt[K[K
+[?2004l[?1049h[22;0;0t[?1h=SCRIPT(1)                 Commandes de l'utilisateur                 SCRIPT(1)[m
+[m
+[1mNOM[0m[m
+       script - Faire une transcription d'une session d'un terminal.[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mscript[0m [[4moptions[24m] [[4mfichier[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       [1mscript[0m effectue un tapuscrit de tout ce qu'il se passe dans la session[m
+       de votre terminal. Les données du terminal sont stockées sous une forme[m
+       brute dans le fichier journal et les informations de temps le sont dans[m
+       un fichier journal structuré (optionnel). Le fichier journal de temps[m
+       est nécessaire pour répéter la session, plus tard, avec [1mscriptreplay[0m(1)[m
+       et pour stocker des informations supplémentaires sur la session.[m
+[m
+       Depuis la version 2.35, [1mscript[0m prend en charge plusieurs flux et permet[m
+       d'enregistrer l'entrée et la sortie dans des fichiers séparés ou dans[m
+       un seul fichier. Cette version gère aussi un nouveau fichier de temps[m
+       qui enregistre des informations supplémentaires. La commande[m
+       [1mscriptreplay[0m [1m--summary[0m fournit ensuite toutes les informations.[m
+[m
+       Si le paramètre [4mfichier[24m ou l'option [1m--log-out[0m [4mfichier[24m est fourni,[m
+[7m Manual page script(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mscript[0m sauvegarde l’affichage dans ce [4mfichier[24m. Si aucun nom de fichier[m
+[7m Manual page script(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       n'est fourni, l’affichage est sauvegardé dans le fichier [4mtypescript[24m.[m
+[7m Manual page script(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page script(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Remarquez que l'enregistrement des saisies avec [1m--log-in[0m ou [1m--log-io[0m[m
+[7m Manual page script(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       peut être une opération sensible au plan de la sécurité, puisque le[m
+[7m Manual page script(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       fichier journal contient toute la saisie de la session en terminal[m
+[7m Manual page script(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       (cela veut dire y compris les mots de passe) indépendamment du[m
+[7m Manual page script(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       positionnement du drapeau [1mECHO[0m du terminal.[m
+[7m Manual page script(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page script(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mOPTIONS[0m[m
+[7m Manual page script(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       L’argument [4mtaille[24m ci-dessous peut être suivi des suffixes[m
+[7m Manual page script(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       multiplicatifs KiB=1024, MiB=1024*1024, etc., pour GiO, TiO, PiO, EiO,[m
+[7m Manual page script(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ZiO et YiO (la partie « iB » est facultative, par exemple « K » est[m
+[7m Manual page script(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       identique à « KiB ») ou des suffixes KB=1000, MB=1000*1000, etc., pour[m
+[7m Manual page script(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       GO, TO, PO, EO, ZO et YO.[m
+[7m Manual page script(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page script(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-a[0m, [1m--append[0m[m
+[7m Manual page script(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Depuis la version 2.35, [1mscript[0m prend en charge plusieurs flux et permet[m
+[24;1H[K[7m Manual page script(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[24;1H[K[7m Manual page script(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       et pour stocker des informations supplémentaires sur la session.[m
+[24;1H[K[7m Manual page script(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       est nécessaire pour répéter la session, plus tard, avec [1mscriptreplay[0m(1)[m
+[24;1H[K[7m Manual page script(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       un fichier journal structuré (optionnel). Le fichier journal de temps[m
+[24;1H[K[7m Manual page script(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       brute dans le fichier journal et les informations de temps le sont dans[m
+[24;1H[K[7m Manual page script(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       de votre terminal. Les données du terminal sont stockées sous une forme[m
+[24;1H[K[7m Manual page script(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mscript[0m effectue un tapuscrit de tout ce qu'il se passe dans la session[m
+[24;1H[K[7m Manual page script(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mDESCRIPTION[0m[m
+[24;1H[K[7m Manual page script(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[24;1H[K[7m Manual page script(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mscript[0m [[4moptions[24m] [[4mfichier[24m][m
+[24;1H[K[7m Manual page script(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mSYNOPSIS[0m[m
+[24;1H[K[7m Manual page script(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[24;1H[K[7m Manual page script(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       script - Faire une transcription d'une session d'un terminal.[m
+[24;1H[K[7m Manual page script(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mNOM[0m[m
+[24;1H[K[7m Manual page script(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[24;1H[K[7m Manual page script(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HMSCRIPT(1)                 Commandes de l'utilisateur                 SCRIPT(1)[m
+[24;1H[K[7m Manual page script(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page script(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page script(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page script(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page script(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page script(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page script(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;debian@debian: ~/JOB12[01;32mdebian@debian[00m:[01;34m~/JOB12[00m$ nano myfirstscript.sh 
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;29H(B[0;7m[ Lecture de 69 lignes ](B[m[H(B[0;7m  GNU nano 7.2                    myfirstscript.sh                              [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2dScript démarré sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/p[39m(B[0;7m>[3;1H(B[m^[[32m[[39m(B[m?2004h^[[32m][39m(B[m0[32m;[39m(B[mdebian@debian[32m:[39m(B[m ~/JOB12^G^[[32m[[39m(B[m01[32m;[39m(B[m32mdebian@debian^[[32m[[39m(B[m00m[32m:[39m(B[m^[[32m[[39m(B[m01[32m;[39m(B[m34m~/J(B[0;7m>[4;1H(B[m^[[32m[[39m(B[m?2004l^Mbash[32m:[39m(B[m ./myfirstscript.sh[32m:[39m(B[m Fichier texte occupé[5d^[[32m[[39m(B[m?2004h^[[32m][39m(B[m0[32m;[39m(B[mdebian@debian[32m:[39m(B[m ~/JOB12^G^[[32m[[39m(B[m01[32m;[39m(B[m32mdebian@debian^[[32m[[39m(B[m00m[32m:[39m(B[m^[[32m[[39m(B[m01[32m;[39m(B[m34m~/J(B[0;7m>[6;1H(B[m^[[32m[[39m(B[m?2004l^M^[[32m[[39m(B[m0m^[[32m[[39m(B[m01[32m;[39m(B[m32mmyfirstscript.sh^[[32m[[39m(B[m0m[7d^[[32m[[39m(B[m?2004h^[[32m][39m(B[m0[32m;[39m(B[mdebian@debian[32m:[39m(B[m ~/JOB12^G^[[32m[[39m(B[m01[32m;[39m(B[m32mdebian@debian^[[32m[[39m(B[m00m[32m:[39m(B[m^[[32m[[39m(B[m01[32m;[39m(B[m34m~/J(B[0;7m>[8;1H(B[m^[[32m[[39m(B[m?2004l^M^[[32m[[39m(B[m?2004h^[[32m][39m(B[m0[32m;[39m(B[mdebian@debian[32m:[39m(B[m ~/JOB12^G^[[32m[[39m(B[m01[32m;[39m(B[m32mdebian@debian^[[32m[[39m(B[m00m[32m:[39m(B[m^(B[0;7m>[9;1H(B[m^[[32m[[39m(B[m?2004l^MScript démarré, le fichier journal de sortie est « typescript ».[10d^[[32m[[39m(B[m?2004h^[[32m][39m(B[m0[32m;[39m(B[mdebian@debian[32m:[39m(B[m ~/JOB12^G^[[32m[[39m(B[m01[32m;[39m(B[m32mdebian@debian^[[32m[[39m(B[m00m[32m:[39m(B[m^[[32m[[39m(B[m01[32m;[39m(B[m34m~/J(B[0;7m>[11;1H(B[m^[[32m[[39m(B[m?2004l^MAucune entrée de manuel pour scriptpt[12d^[[32m[[39m(B[m?2004h^[[32m][39m(B[m0[32m;[39m(B[mdebian@debian[32m:[39m(B[m ~/JOB12^G^[[32m[[39m(B[m01[32m;[39m(B[m32mdebian@debian^[[32m[[39m(B[m00m[32m:[39m(B[m^[[32m[[39m(B[m01[32m;[39m(B[m34m~/J(B[0;7m>[13;1H(B[m^[[32m[[39m(B[m?2004l^M^[[32m[[39m(B[m?1049h^[[32m[[39m(B[m22[32m;[39m(B[m0[32m;[39m(B[m0t^[[32m[[39m(B[m?1h^[[32m=[39m(B[m^MSCRIPT[32m([39m(B[m1[32m)[13;68H[39m(B[mCommandes de(B[0;7m>[14;1H(B[m^[[32m[[39m(B[mm[15d^[[32m[[39m(B[m1mNOM^[[32m[[39m(B[m0m^[[32m[[39m(B[mm[16;8Hscript - Faire une transcription d(B[0;1m[33m'une session d'[39m(B[mun terminal.^[[32m[[39m(B[mm[17d^[[32m[[39m(B[mm[18d^[[32m[[39m(B[m1mSYNOPSIS^[[32m[[39m(B[m0m^[[32m[[39m(B[mm[19;8H^[[32m[[39m(B[m1mscript^[[32m[[39m(B[m0m [32m[[39m(B[m^[[32m[[39m(B[m4moptions^[[32m[[39m(B[m24m[32m][39m(B[m [32m[[39m(B[m^[[32m[[39m(B[m4mfichier^[[32m[[39m(B[m24m[32m][39m(B[m^[[32m[[39m(B[mm[20d^[[32m[[39m(B[mm[21d^[[32m[[39m(B[m1mDESCRIPTION^[[32m[[39m(B[m0m^[[32m[[39m(B[mm[2d[?12l[?25h[?25l[1;52H(B[0;7m*[79G(B[m[?12l[?25h[2dcript démarré sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pt[39m(B[m[?25l[?12l[?25hript démarré sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts[39m(B[m[?25l[?12l[?25hipt démarré sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/[39m(B[m[?25l[?12l[?25hpt démarré sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1[39m(B[m[?25l[?12l[?25ht démarré sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m[?25l[?12l[?25h démarré sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m [?25l[?12l[?25hdémarré sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m C[?25l[?12l[?25hémarré sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m CO[?25l[?12l[?25hmarré sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COL[?25l[?12l[?25harré sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLU[?25l[?12l[?25hrré sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUM[?25l[?12l[?25hré sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMN[?25l[?12l[?25hé sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[?25l[?12l[?25h sur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=[39m(B[m[?25l[?12l[?25hsur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"[39m(B[m[?25l[?12l[?25hur 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"8[39m(B[m[?25l[?12l[?25hr 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80[39m(B[m[?25l[?12l[?25h 2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m[?25l[?12l[?25h2024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m [?25l[22d[K[?12l[?25h[2d024-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m L[?25l[?12l[?25h24-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m LI[?25l[?12l[?25h4-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m LIN[?25l[?12l[?25h-03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m LINE[?25l[?12l[?25h03-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m LINES[?25l[?12l[?25h3-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m LINES[32m=[39m(B[m[?25l[?12l[?25h-13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m LINES[32m=(B[0;1m[33m"[39m(B[m[?25l[?12l[?25h13 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m LINES[32m=(B[0;1m[33m"2[39m(B[m[?25l[?12l[?25h3 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m LINES[32m=(B[0;1m[33m"24[39m(B[m[?25l[?12l[?25h 09[32m:[39m(B[m44[32m:[39m(B[m24+01[32m:[39m(B[m00 [32m[[39m(B[mTERM[32m=(B[0;1m[33m"xterm-256color"[39m(B[m TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m LINES[32m=(B[0;1m[33m"24"(B[0m[32m][2;1H[39m(B[m[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25hxterm-256color(B[0;1m[33m" TTY="[39m(B[m/dev/pts/1(B[0;1m[33m" COLUMNS="[39m(B[m80(B[0;1m[33m" LINES="[39m(B[m24"[32m][39m(B[m[K[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h(B[0;1m[34mrm[39m(B[m[1P[?25l[?12l[?25hm[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h TTY[32m=(B[0;1m[33m"/dev/pts/1"[39m(B[m COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m LINES[32m=(B[0;1m[33m"24"(B[0m[32m][39m(B[m[K[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h/dev/pts/1(B[0;1m[33m" COLUMNS="[39m(B[m80(B[0;1m[33m" LINES="[39m(B[m24"[32m][39m(B[m[K[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h COLUMNS[32m=(B[0;1m[33m"80"[39m(B[m LINES[32m=(B[0;1m[33m"24"(B[0m[32m][39m(B[m[K[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h80(B[0;1m[33m" LINES="[39m(B[m24"[32m][39m(B[m[K[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h LINES[32m=(B[0;1m[33m"24"(B[0m[32m][39m(B[m[K[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h(B[0;1m[33m"24"(B[0m[32m][39m(B[m[K[?25l[?12l[?25hq(B[0;1m[33m"24"(B[0m[32m][C[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB12[01;32mdebian@debian[00m:[01;34m~/JOB12[00m$ rm myfirstscript.sh 
+[?2004l[?2004h]0;debian@debian: ~/JOB12[01;32mdebian@debian[00m:[01;34m~/JOB12[00m$ nano mydi[K[Kfirstscript.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;31H(B[0;7m[ Nouveau fichier ](B[m[H(B[0;7m  GNU nano 7.2                    myfirstscript.sh                              [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[?12l[?25h[?25l[1;52H(B[0;7m*[79G(B[m[?12l[?25h[2de[?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25h(B[0;1m[34mecho[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h "[?25l[?12l[?25h'[?25l[?12l[?25h [?25l[?12l[?25h'[?25l[?12l[?25h [?25l[?12l[?25hi[?25l[?12l[?25h'[?25l[?12l[?25hm[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h a[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h s[?25l[?12l[?25hc[?25l[?12l[?25hr[?25l[22d[K[?12l[?25h[2;16Hi[?25l[?12l[?25hp[?25l[?12l[?25ht[?25l[?12l[?25h[6G(B[0;1m[33m"i'm a script"[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: myfirstscript.sh(B[m[?12l[?25h[?25l[22;32H[1K (B[0;7m[ Écriture... ](B[m[K[1;52H(B[0;7m [79G(B[m[22;32H(B[0;7m[ 1 ligne écrite ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB12[01;32mdebian@debian[00m:[01;34m~/JOB12[00m$ chmod +x myfirstscript.sh 
+[?2004l[?2004h]0;debian@debian: ~/JOB12[01;32mdebian@debian[00m:[01;34m~/JOB12[00m$ ./myfirstscript.sh 
+[?2004li'm a script
+[?2004h]0;debian@debian: ~/JOB12[01;32mdebian@debian[00m:[01;34m~/JOB12[00m$ cd ..
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ mkdir JOB12[K3
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ cd JOB13/
+[?2004l[?2004h]0;debian@debian: ~/JOB13[01;32mdebian@debian[00m:[01;34m~/JOB13[00m$ nano l[Kl[Kmya[Kupdate.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;31H(B[0;7m[ Nouveau fichier ](B[m[H(B[0;7m  GNU nano 7.2                       myupdate.sh                                [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[?12l[?25h[?25l[1;50H(B[0;7m*[79G(B[m[?12l[?25h[2ds[?25l[?12l[?25hu[?25l[?12l[?25hd[?25l[?12l[?25ho[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h a[?25l[?12l[?25hp[?25l[?12l[?25ht[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h u[?25l[?12l[?25hp[?25l[?12l[?25hd[?25l[?12l[?25ha[?25l[?12l[?25ht[?25l[?12l[?25he[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h -[?25l[?12l[?25h(B[0;1m[35m -y[39m(B[m[?25l[3d[?12l[?25h[?25l[22d[K[?12l[?25h[3ds[?25l[?12l[?25hu[?25l[?12l[?25hd[?25l[?12l[?25ho[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h a[?25l[?12l[?25hp[?25l[?12l[?25ht[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[3d[?25l[?12l[?25hs[?25l[?12l[?25hu[?25l[?12l[?25hd[?25l[?12l[?25ho[?25l[?12l[?25h [?25l[?12l[?25ha[?25l[?12l[?25h[4d[?25l[?12l[?25h[3;10H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hapt[42m [49m(B[m[K[?25l[?12l[?25hapt[42m [49m(B[m[K[?25l[?12l[?25hapt[42m [49m(B[m[Ksu[?25l[?12l[?25hapt[42m [49m(B[m[Ks[?25l[?12l[?25hapt[42m [49m(B[m[K[?25l[?12l[?25ha[?25l[?12l[?25hp[?25l[?12l[?25ht[?25l[?12l[?25h[C[?25l[?12l[?25h[4d[?25l[?12l[?25h[3;5H[?25l[?12l[?25h u[?25l[?12l[?25hp[?25l[?12l[?25hg[?25l[?12l[?25hr[?25l[?12l[?25ha[?25l[?12l[?25hd[?25l[?12l[?25he[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h -[?25l[?12l[?25h(B[0;1m[35m -y[39m(B[m[?25l[?12l[?25h[4d[?25l[?12l[?25h[3;15H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[2;14H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hsapt update(B[0;1m[35m -y[C[39m(B[m[?25l[?12l[?25huapt update(B[0;1m[35m -y[3G[39m(B[m[?25l[?12l[?25hdapt update(B[0;1m[35m -y[4G[39m(B[m[?25l[?12l[?25hoapt update(B[0;1m[35m -y[5G[39m(B[m[?25l[?12l[?25h apt update(B[0;1m[35m -y[6G[39m(B[m[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[?25l[?12l[?25h[3;15H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hsapt upgrade(B[0;1m[35m -y[C[39m(B[m[?25l[?12l[?25huapt upgrade(B[0;1m[35m -y[3G[39m(B[m[?25l[?12l[?25hdapt upgrade(B[0;1m[35m -y[4G[39m(B[m[?25l[?12l[?25hoapt upgrade(B[0;1m[35m -y[5G[39m(B[m[?25l[?12l[?25h apt upgrade(B[0;1m[35m -y[6G[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: myupdate.sh(B[m[?12l[?25h[?25l[32G[1K (B[0;7m[ Écriture... ](B[m[K[1;50H(B[0;7m [79G(B[m[22;31H(B[0;7m[ 2 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB13[01;32mdebian@debian[00m:[01;34m~/JOB13[00m$ chmod +x myupdate.sh 
+[?2004l[?2004h]0;debian@debian: ~/JOB13[01;32mdebian@debian[00m:[01;34m~/JOB13[00m$ ./myupdate.sh 
+[?2004l[sudo] Mot de passe de debian : 
+[33m0% [En cours][0m             Atteint :1 http://security.debian.org/debian-security bookworm-security InRelease
+[33m0% [Attente des fichiers d'en-tête][0m                                    Atteint :2 http://deb.debian.org/debian bookworm InRelease
+[33m0% [Attente des fichiers d'en-tête][0m                                    Atteint :3 http://deb.debian.org/debian bookworm-updates InRelease
+[33m                                    0% [En cours][0m[33m0% [En cours][0m[33m0% [En cours][0m[33m20% [En cours][0m              Lecture des listes de paquets… 0%Lecture des listes de paquets… 0%Lecture des listes de paquets… 0%Lecture des listes de paquets… 50%Lecture des listes de paquets… 50%Lecture des listes de paquets… 52%Lecture des listes de paquets… 63%Lecture des listes de paquets… 63%Lecture des listes de paquets… 96%Lecture des listes de paquets… 96%Lecture des listes de paquets… 96%Lecture des listes de paquets… 96%Lecture des listes de paquets… 96%Lecture des listes de paquets… 96%Lecture des listes de paquets… 97%Lecture des listes de paquets… 97%Lecture des listes de paquets… 98%Lecture des listes de paquets… 98%Lecture des listes de paquets… 98%Lecture des listes de paquets… 98%Lecture des listes de paquets… 98%Lecture des listes de paquets… 98%Lecture des listes de paquets… 98%Lecture des listes de paquets… 98%Lecture des listes de paquets… 98%Lecture des listes de paquets… 98%Lecture des listes de paquets… 98%Lecture des listes de paquets… 98%Lecture des listes de paquets… 98%Lecture des listes de paquets… 98%Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances… 0%Construction de l'arbre des dépendances… 0%Construction de l'arbre des dépendances… 0%Construction de l'arbre des dépendances… 50%Construction de l'arbre des dépendances… 50%Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état… 0%          Lecture des informations d'état… 0%Lecture des informations d'état... Fait
+Tous les paquets sont à jour.
+Lecture des listes de paquets… 0%Lecture des listes de paquets… 100%Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances… 0%Construction de l'arbre des dépendances… 0%Construction de l'arbre des dépendances… 50%Construction de l'arbre des dépendances… 50%Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état… 0%          Lecture des informations d'état… 0%Lecture des informations d'état... Fait
+Calcul de la mise à jour… 0%Calcul de la mise à jour… 10%Calcul de la mise à jour... Fait
+0 mis à jour, 0 nouvellement installés, 0 à enlever et 0 non mis à jour.
+[?2004h]0;debian@debian: ~/JOB13[01;32mdebian@debian[00m:[01;34m~/JOB13[00m$ cd ..
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ mkdir JOB14
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ cd JOB14
+[?2004l[?2004h]0;debian@debian: ~/JOB14[01;32mdebian@debian[00m:[01;34m~/JOB14[00m$ nano add.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;31H(B[0;7m[ Nouveau fichier ](B[m[H(B[0;7m  GNU nano 7.2                         add.sh                                   [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[?12l[?25h[?25l[1;47H(B[0;7m*[79G(B[m[?12l[?25h[2de[?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25h(B[0;1m[34mecho[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$1[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h +[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$2[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: add.sh(B[m[?12l[?25h[?25l[1K (B[0;7m[ Écriture... ](B[m[K[1;47H(B[0;7m [79G(B[m[22;32H(B[0;7m[ 1 ligne écrite ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB14[01;32mdebian@debian[00m:[01;34m~/JOB14[00m$ chmod +x add.sh 
+[?2004l[?2004h]0;debian@debian: ~/JOB14[01;32mdebian@debian[00m:[01;34m~/JOB14[00m$ ./add.sh 1 5
+[?2004l1 + 5
+[?2004h]0;debian@debian: ~/JOB14[01;32mdebian@debian[00m:[01;34m~/JOB14[00m$ ./add.sh 1 5chmod +x add.sh [5Pnano add.sh*
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;30H(B[0;7m[ Lecture de 1 ligne ](B[m[H(B[0;7m  GNU nano 7.2                         add.sh                                   [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d(B[0;1m[34mecho[39m(B[m (B[0;1m[31m$1[39m(B[m + (B[0;1m[31m$2[39m(B[m[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[1;47H(B[0;7m*[79G(B[m[?12l[?25h[2;7H(B[0;1m[31m$[39m(B[m1 + (B[0;1m[31m$2[7G[39m(B[m[?25l[?12l[?25h[32m$((B[0;1m[31m$1[39m(B[m + (B[0;1m[31m$2[8G[39m(B[m[?25l[23;14H             (B[0;7mM-F(B[m Nouvel espace         (B[0;7m^X[23;65H(B[mune commande[K[24;2H(B[0;7mC(B[m Annuler[16X[24;27H(B[0;7mM-N(B[m Pas de conversion     (B[0;7m^T(B[m Parcourir[K[22d(B[0;7mFichier à insérer [à partir de ./]:                                             [22;37H(B[m[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l(B[0;7mc(B[m[?12l[?25h[?25l(B[0;7m (B[m[?12l[?25h[?25l[1K (B[0;7m[ Annulé ](B[m[K[23;14H(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T[23;65H(B[m (B[0;7m^C(B[m Emplacement[24;2H(B[0;7mX(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[?12l[?25h[2;8H[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h+[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[3d[?25l[?12l[?25h[32m)[39m(B[m[?25l[?12l[?25h[?25l[2;15H[32m)[3d[39m(B[m[K[2;15H[?12l[?25h[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: add.sh(B[m[?12l[?25h[?25l[1K (B[0;7m[ Écriture... ](B[m[K[1;47H(B[0;7m [79G(B[m[22;32H(B[0;7m[ 1 ligne écrite ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB14[01;32mdebian@debian[00m:[01;34m~/JOB14[00m$ nano add.sh*./add.sh 1 5
+[?2004l./add.sh: ligne 1: 1 : commande introuvable
+
+[?2004h]0;debian@debian: ~/JOB14[01;32mdebian@debian[00m:[01;34m~/JOB14[00m$ ls
+[?2004l[0m[01;32madd.sh[0m
+[?2004h]0;debian@debian: ~/JOB14[01;32mdebian@debian[00m:[01;34m~/JOB14[00m$ ls./add.sh 1 5nano add.sh*[K
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;30H(B[0;7m[ Lecture de 1 ligne ](B[m[H(B[0;7m  GNU nano 7.2                         add.sh                                   [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d(B[0;1m[34mecho[39m(B[m [32m$((B[0;1m[31m$1[39m(B[m + (B[0;1m[31m$2(B[0m[32m)[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[1;47H(B[0;7m*[79G(B[m[?12l[?25h[2;7H[32m(((B[0;1m[31m$1[39m(B[m + (B[0;1m[31m$2(B[0m[32m)[2;9H[39m(B[m[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h+[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[32m)[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: add.sh(B[m[?12l[?25h[?25l[1K (B[0;7m[ Écriture... ](B[m[K[1;47H(B[0;7m [79G(B[m[22;32H(B[0;7m[ 1 ligne écrite ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB14[01;32mdebian@debian[00m:[01;34m~/JOB14[00m$ nano add.shls[K./add.sh 1 5
+[?2004l6
+[?2004h]0;debian@debian: ~/JOB14[01;32mdebian@debian[00m:[01;34m~/JOB14[00m$ cd ..
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ mkdir JOB15
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ nano argument.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;31H(B[0;7m[ Nouveau fichier ](B[m[H(B[0;7m  GNU nano 7.2                       argument.sh                                [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[?12l[?25h[?25l[1;50H(B[0;7m*[79G(B[m[?12l[?25h[2d[32m$[39m(B[m[?25l[?12l[?25h[32m&[39m(B[m[?25l[?12l[?25h [?25l[?12l[?25h(B[0;1m[31m$1[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m>[39m(B[m[?25l[?12l[?25h[32m>[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$2[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: argument.sh(B[m[?12l[?25h[?25l[32G[1K (B[0;7m[ Écriture... ](B[m[K[1;50H(B[0;7m [79G(B[m[22;32H(B[0;7m[ 1 ligne écrite ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ cp /etc/passwd .[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kchmod +x .[Kargument.sh 
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ ..[K/argument.sh /etc/passwd passwd
+[?2004l./argument.sh: ligne 1: /etc/passwd: Permission non accordée
+[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ car [K[Kt /etc/â[Kpasswd
+[?2004lroot:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+tss:x:100:107:TPM software stack,,,:/var/lib/tpm:/bin/false
+systemd-timesync:x:997:997:systemd Time Synchronization:/:/usr/sbin/nologin
+messagebus:x:101:108::/nonexistent:/usr/sbin/nologin
+usbmux:x:102:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+dnsmasq:x:103:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+avahi:x:104:112:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin
+speech-dispatcher:x:105:29:Speech Dispatcher,,,:/run/speech-dispatcher:/bin/false
+fwupd-refresh:x:106:115:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+saned:x:107:117::/var/lib/saned:/usr/sbin/nologin
+geoclue:x:108:118::/var/lib/geoclue:/usr/sbin/nologin
+polkitd:x:996:996:polkit:/nonexistent:/usr/sbin/nologin
+rtkit:x:109:119:RealtimeKit,,,:/proc:/usr/sbin/nologin
+colord:x:110:120:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+gnome-initial-setup:x:111:65534::/run/gnome-initial-setup/:/bin/false
+Debian-gdm:x:112:121:Gnome Display Manager:/var/lib/gdm3:/bin/false
+debian:x:1000:1000:debian,,,:/home/debian:/bin/bash
+[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ cat /etc/passwd./argument.sh /etc/passwd passwd[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pchmod +x argument.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pnano argument.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;30H(B[0;7m[ Lecture de 1 ligne ](B[m[H(B[0;7m  GNU nano 7.2                       argument.sh                                [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d(B[0;1m[31m$1[39m(B[m [32m>>[39m(B[m (B[0;1m[31m$2[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[A[?25l[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[1;50H(B[0;7m*[79G(B[m[?12l[?25h[2d[32m$[39m(B[m[1P[?25l[?12l[?25h[1P[?25l[?12l[?25hc [32m>>[39m(B[m (B[0;1m[31m$2[C[39m(B[m[?25l[?12l[?25ha [32m>>[39m(B[m (B[0;1m[31m$2[3G[39m(B[m[?25l[?12l[?25h(B[0;1m[34mcat[39m(B[m [32m>>[39m(B[m (B[0;1m[31m$2[4G[39m(B[m[?25l[?12l[?25h  [32m>>[39m(B[m (B[0;1m[31m$2[5G[39m(B[m[?25l[?12l[?25h[32m$[39m(B[m [32m>>[39m(B[m (B[0;1m[31m$2[6G[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$2[39m(B[m [32m>>[39m(B[m (B[0;1m[31m$2[7G[39m(B[m[?25l[23;14H             (B[0;7mM-F(B[m Nouvel espace         (B[0;7m^X[23;65H(B[mune commande[K[24;2H(B[0;7mC(B[m Annuler[16X[24;27H(B[0;7mM-N(B[m Pas de conversion     (B[0;7m^T(B[m Parcourir[K[22d(B[0;7mFichier à insérer [à partir de ./]:                                             [22;37H(B[m[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[1K (B[0;7m[ Annulé ](B[m[K[23;14H(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T[23;65H(B[m (B[0;7m^C(B[m Emplacement[24;2H(B[0;7mX(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[?12l[?25h[2;7H[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[3d[?25l[?12l[?25h[2;13H[?25l[?12l[?25h[32m$[39m(B[m[K[?25l[?12l[?25h(B[0;1m[31m$1[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: argument.sh(B[m[?12l[?25h[?25l[32G[1K (B[0;7m[ Écriture... ](B[m[K[1;50H(B[0;7m [79G(B[m[22;32H(B[0;7m[ 1 ligne écrite ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ ./Ar[Ka[K[Kargument.sh passwd /etc/passwd
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ cat passwd 
+[?2004lroot:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+tss:x:100:107:TPM software stack,,,:/var/lib/tpm:/bin/false
+systemd-timesync:x:997:997:systemd Time Synchronization:/:/usr/sbin/nologin
+messagebus:x:101:108::/nonexistent:/usr/sbin/nologin
+usbmux:x:102:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+dnsmasq:x:103:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+avahi:x:104:112:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin
+speech-dispatcher:x:105:29:Speech Dispatcher,,,:/run/speech-dispatcher:/bin/false
+fwupd-refresh:x:106:115:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+saned:x:107:117::/var/lib/saned:/usr/sbin/nologin
+geoclue:x:108:118::/var/lib/geoclue:/usr/sbin/nologin
+polkitd:x:996:996:polkit:/nonexistent:/usr/sbin/nologin
+rtkit:x:109:119:RealtimeKit,,,:/proc:/usr/sbin/nologin
+colord:x:110:120:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+gnome-initial-setup:x:111:65534::/run/gnome-initial-setup/:/bin/false
+Debian-gdm:x:112:121:Gnome Display Manager:/var/lib/gdm3:/bin/false
+debian:x:1000:1000:debian,,,:/home/debian:/bin/bash
+[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ sl[K[Kls
+[?2004l[0m[01;32margument.sh[0m  [01;34mDocuments[0m  [01;34mJOB12[0m  [01;34mJOB14[0m  [01;34mModèles[0m  passwd  [01;34mTéléchargements[0m
+[01;34mBureau[0m       [01;34mImages[0m     [01;34mJOB13[0m  [01;34mJOB15[0m  [01;34mMusique[0m  [01;34mPublic[0m  [01;34mVidéos[0m
+[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ mv argument.sh JOB15/
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ mv passwd JOB15
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ mkdi [K[Kr[Kir JOB16
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ cd JOB16
+[?2004l[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ nano hello_bye.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;31H(B[0;7m[ Nouveau fichier ](B[m[H(B[0;7m  GNU nano 7.2                      hello_bye.sh                                [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[?12l[?25h[?25l[1;50H(B[0;7m*[79G(B[m[?12l[?25h[2di[?25l[?12l[?25h[32mif[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m[[39m(B[m[?25l[?12l[?25h[32m][39m(B[m[?25l[?12l[?25h[?25l[?12l[?25h[32m$][39m(B[m[?25l[?12l[?25h [32m][39m(B[m[?25l[?12l[?25h[32m][39m(B[m[K[?25l[?12l[?25h(B[0;1m[31m$1(B[0m[32m][39m(B[m[?25l[?12l[?25h [32m][39m(B[m[?25l[?12l[?25h[32m=][39m(B[m[?25l[?12l[?25h[32m==][39m(B[m[?25l[?12l[?25h [32m][39m(B[m[?25l[?12l[?25h"[32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33m""(B[0m[32m][39m(B[m[?25l[?12l[?25h[3d[?25l[?12l[?25h[2;13H[?25l[?12l[?25h[?25l[22d[K[?12l[?25h[2;12H(B[0;1m[33mH"(B[0m[32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33me"(B[0m[32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33ml"(B[0m[32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33mo"(B[0m[32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33moo"(B[0m[32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33mo"(B[0m[32m][39m(B[m[K[?25l[?12l[?25h(B[0;1m[33m"(B[0m[32m][39m(B[m[K[?25l[?12l[?25h(B[0;1m[33mll"(B[0m[32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33mo"(B[0m[32m][39m(B[m[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[3d[?12l[?25h[?25l[?12l[?25ht[?25l[?12l[?25hh[?25l[?12l[?25he[?25l[?12l[?25h[32mthen[39m(B[m[?25l[4d[?12l[?25h[?25l[?12l[?25h[8G[42m[1K [49m(B[m[?25l[?12l[?25h[1K e[?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25h(B[0;1m[34mecho[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h "[?25l[?12l[?25h(B[0;1m[33m""[39m(B[m[?25l[?12l[?25h[?25l[?12l[?25h(B[0;1m[33mH"[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[?12l[?25h(B[0;1m[33ml"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mll"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mo"[39m(B[m[?25l[?12l[?25h[C[?25l[5d[?12l[?25h[?25l[?12l[?25he[?25l[?12l[?25hl[?25l[?12l[?25hi[?25l[?12l[?25h[32melif[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m[)[39m(B[m[?25l[?12l[?25h [?25l[?12l[?25h[32m][39m(B[m[?25l[?12l[?25h[6d[?25l[?12l[?25h[5;8H[?25l[?12l[?25h[?25l[?12l[?25h[32m$][39m(B[m[?25l[?12l[?25h(B[0;1m[31m$1(B[0m[32m][39m(B[m[?25l[?12l[?25h [32m][39m(B[m[?25l[?12l[?25h[32m=][39m(B[m[?25l[?12l[?25h[32m==][39m(B[m[?25l[?12l[?25h [32m][39m(B[m[?25l[?12l[?25h"[32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33m""(B[0m[32m][39m(B[m[?25l[?12l[?25h[6d[?25l[?12l[?25h[5;16H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h(B[0;1m[33mB"(B[0m[32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33mu"(B[0m[32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33me"(B[0m[32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33m"(B[0m[32m][39m(B[m[K[?25l[?12l[?25h(B[0;1m[33m"(B[0m[32m][39m(B[m[K[?25l[?12l[?25h(B[0;1m[33my"(B[0m[32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33me"(B[0m[32m][39m(B[m[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[6d[?12l[?25h[?25l[?12l[?25ht[?25l[?12l[?25hh[?25l[?12l[?25he[?25l[?12l[?25h[32mthen[39m(B[m[?25l[7d[?12l[?25h[?25l[?12l[?25h[8G[42m[1K [49m(B[m[?25l[?12l[?25h[1K e[?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25h(B[0;1m[34mecho[39m(B[m[?25l[?12l[?25h"[?25l[?12l[?25h [?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h "[?25l[?12l[?25h(B[0;1m[33m""[39m(B[m[?25l[?12l[?25h[?25l[?12l[?25h(B[0;1m[33mB"[39m(B[m[?25l[?12l[?25h(B[0;1m[33my"[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[?12l[?25h[C[?25l[8d[?12l[?25h[?25l[?12l[?25hf[?25l[?12l[?25h[32mfi[39m(B[m[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[7;19H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[6;5H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[5;19H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[4;21H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33mB"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mo"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mn"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mj"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mo"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mu"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mr"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m,"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33mj"[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33ms"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mu"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m[?25l[?12l[?25h(B[0;1m[33ms"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33mu"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mn"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33ms"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mc"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mr"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33mcc"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33mr"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mp"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mt"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33m!"[39m(B[m[?25l[?12l[?25h[5;19H[?25l[?12l[?25h[6;5H[?25l[?12l[?25h[7;19H[?25l[?12l[?25h[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33mA"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mu"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33mr"[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mv"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mo"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mr"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mt"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33mb"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mo"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mn"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mnn"[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33mj"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mo"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mu"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mr"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mn"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mé"[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: hello_bye.sh(B[m[?12l[?25h[?25l[32G[1K (B[0;7m[ Écriture... ](B[m[K[1;50H(B[0;7m [79G(B[m[22;31H(B[0;7m[ 7 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ chmod +x hello_bye.sh 
+[?2004l[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ ./j[Khello_bye.sh 
+[?2004l./hello_bye.sh: ligne 1 : [: « ] » manquant
+./hello_bye.sh: ligne 4 : [: « ] » manquant
+[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ ./hello_bye.sh Hello
+[?2004l./hello_bye.sh: ligne 1: [Hello : commande introuvable
+./hello_bye.sh: ligne 4: [Hello : commande introuvable
+[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ ./hello_bye.sh Hello[K[7@chmod +x [C[C[C[C[C[C[C[C[C[C[C[C[C[5Pnano hello_bye.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;29H(B[0;7m[ Lecture de 7 lignes ](B[m[H(B[0;7m  GNU nano 7.2                      hello_bye.sh                                [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[32mif[39m(B[m [32m[(B[0;1m[31m$1[39m(B[m [32m==[39m(B[m (B[0;1m[33m"Hello"(B[0m[32m][3dthen[4;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[33m"Bonjour, je suis un script !"[5d(B[0m[32melif[39m(B[m [32m[(B[0;1m[31m$1[39m(B[m [32m==[39m(B[m (B[0;1m[33m"Bye"(B[0m[32m][6dthen[7;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[33m"Au revoir et bonne journée"[8d(B[0m[32mfi[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[3d[?25l[?12l[?25h[?25l[1;75H(B[0;7mM   (B[m[?12l[?25h[2;4H(B[0;7m[$1 == "Hello"][3dthe[A(B[m[?25l[1;75H(B[0;7m    (B[m[2;4H[32m[(B[0;1m[31m$1[39m(B[m [32m==[39m(B[m (B[0;1m[33m"Hello"(B[0m[32m][3dthe[A[39m(B[m[?12l[?25h[?25l[?12l[?25h[C[?25l[1;50H(B[0;7m*[79G(B[m[?12l[?25h[2;5H(B[0;1m[33m"$1 == "[39m(B[mHello"[32m][6G[39m(B[m[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m [32m==[39m(B[m (B[0;1m[33m"Hello"(B[0m[32m][2;9H[39m(B[m[?25l[?12l[?25h[3;5H[?25l[?12l[?25h[4;9H[?25l[?12l[?25h[5d[?25l[?12l[?25h[6;5H[?25l[?12l[?25h[?25l[22d[K[?12l[?25h[5;4H[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h(B[0;1m[33m"$1 == "[39m(B[mBye"[32m][8G[39m(B[m[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m [32m==[39m(B[m (B[0;1m[33m"Bye"(B[0m[32m][5;11H[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: hello_bye.sh(B[m[?12l[?25h[?25l[32G[1K (B[0;7m[ Écriture... ](B[m[K[1;50H(B[0;7m [79G(B[m[22;31H(B[0;7m[ 7 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ nano hello_bye.sh./hello_bye.sh Hello
+[?2004l./hello_bye.sh: ligne 1: [Hello : commande introuvable
+./hello_bye.sh: ligne 4: [Hello : commande introuvable
+[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ ./hello_bye.sh Hello[3Pnano hello_bye.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;29H(B[0;7m[ Lecture de 7 lignes ](B[m[H(B[0;7m  GNU nano 7.2                      hello_bye.sh                                [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[32mif[39m(B[m [32m[(B[0;1m[33m"$1"[39m(B[m [32m==[39m(B[m (B[0;1m[33m"Hello"(B[0m[32m][3dthen[4;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[33m"Bonjour, je suis un script !"[5d(B[0m[32melif[39m(B[m [32m[(B[0;1m[33m"$1"[39m(B[m [32m==[39m(B[m (B[0;1m[33m"Bye"(B[0m[32m][6dthen[7;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[33m"Au revoir et bonne journée"[8d(B[0m[32mfi[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[5G[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[1;50H(B[0;7m*[79G(B[m[?12l[?25h[2;10H[1P[?25l[?12l[?25h[3;5H[?25l[?12l[?25h[4;10H[?25l[?12l[?25h[5d[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[1P[C[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: hello_bye.sh(B[m[?12l[?25h[?25l[32G[1K (B[0;7m[ Écriture... ](B[m[K[1;50H(B[0;7m [79G(B[m[22;31H(B[0;7m[ 7 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ nano hello_bye.sh./hello_bye.sh Hello[3Pnano hello_bye.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;29H(B[0;7m[ Lecture de 7 lignes ](B[m[H(B[0;7m  GNU nano 7.2                      hello_bye.sh                                [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[32mif[39m(B[m [32m[(B[0;1m[33m"$1"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"Hello"(B[0m[32m][3dthen[4;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[33m"Bonjour, je suis un script !"[5d(B[0m[32melif[39m(B[m [32m[(B[0;1m[33m"$1"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"Bye"(B[0m[32m][6dthen[7;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[33m"Au revoir et bonne journée"[8d(B[0m[32mfi[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[A[?25l[22d[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ nano hello_bye.sh./hello_bye.sh Hello
+[?2004l./hello_bye.sh: ligne 1: [Hello : commande introuvable
+./hello_bye.sh: ligne 4: [Hello : commande introuvable
+[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ ./hello_bye.sh Hello[K[K[K[K[Kdsjnsklj
+[?2004l./hello_bye.sh: ligne 1: [dsjnsklj : commande introuvable
+./hello_bye.sh: ligne 4: [dsjnsklj : commande introuvable
+[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ ./hello_bye.sh dsjnsklj[3PHello[3Pnano hello_bye.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;29H(B[0;7m[ Lecture de 7 lignes ](B[m[H(B[0;7m  GNU nano 7.2                      hello_bye.sh                                [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[32mif[39m(B[m [32m[(B[0;1m[33m"$1"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"Hello"(B[0m[32m][3dthen[4;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[33m"Bonjour, je suis un script !"[5d(B[0m[32melif[39m(B[m [32m[(B[0;1m[33m"$1"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"Bye"(B[0m[32m][6dthen[7;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[33m"Au revoir et bonne journée"[8d(B[0m[32mfi[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[1;50H(B[0;7m*[79G(B[m[?12l[?25h[2;5H (B[0;1m[33m"$1"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"Hello"(B[0m[32m][6G[39m(B[m[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[22d[K[?12l[?25h[2;20H [32m][39m(B[m[?25l[?12l[?25h[3;5H[?25l[?12l[?25h[4;21H[?25l[?12l[?25h[5d[?25l[?12l[?25h[6;5H[?25l[?12l[?25h[5;20H[?25l[?12l[?25h[?25l[?12l[?25h [32m][39m(B[m[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h (B[0;1m[33m"$1"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"Bye"[39m(B[m [32m][8G[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: hello_bye.sh(B[m[?12l[?25h[?25l[32G[1K (B[0;7m[ Écriture... ](B[m[K[1;50H(B[0;7m [79G(B[m[22;31H(B[0;7m[ 7 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ nano hello_bye.sh./hello_bye.sh dsjnsklj
+[?2004l[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ ./hello_bye.sh dsjnsklj[K[K[K[K[K[K[K[KHello
+[?2004lBonjour, je suis un script !
+[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ 
+[?2004l[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ ./hello_bye.sh Hello[K[K[K[K[KBye
+[?2004lAu revoir et bonne journée
+[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ nano my_calculator.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;31H(B[0;7m[ Nouveau fichier ](B[m[H(B[0;7m  GNU nano 7.2                    my_calculator.sh                              [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[?12l[?25h[?25l[1;52H(B[0;7m*[79G(B[m[?12l[?25h[2di[?25l[?12l[?25h[32mif[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m[[39m(B[m[?25l[?12l[?25h[32m)[39m(B[m[?25l[?12l[?25h [?25l[?12l[?25h[32m][39m(B[m[?25l[?12l[?25h[?25l[?12l[?25h [32m][39m(B[m[?25l[?12l[?25h  [32m][39m(B[m[?25l[?12l[?25h[?25l[?12l[?25h[32m$[39m(B[m [32m][39m(B[m[?25l[?12l[?25h(B[0;1m[31m$é[39m(B[m [32m][39m(B[m[?25l[?12l[?25h[32m$[39m(B[m [32m][39m(B[m[K[?25l[?12l[?25h(B[0;1m[31m$2[39m(B[m [32m][39m(B[m[?25l[?12l[?25h[3d[?25l[?12l[?25h[?25l[?12l[?25h[2;8H[?25l[22d[K[?12l[?25h[2;7H[?25l[?12l[?25h[?25l[?12l[?25h"(B[0;1m[31m$2[39m(B[m [32m][39m(B[m[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h(B[0;1m[33m"$2"[39m(B[m [32m][39m(B[m[?25l[?12l[?25h  [32m][39m(B[m[?25l[?12l[?25h[32m=[39m(B[m [32m][39m(B[m[?25l[?12l[?25h  [32m][39m(B[m[?25l[?12l[?25h" [32m][39m(B[m[?25l[?12l[?25h+ [32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33m"+"[39m(B[m [32m][39m(B[m[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[3d[?12l[?25h[?25l[?12l[?25ht[?25l[?12l[?25hh[?25l[?12l[?25he[?25l[?12l[?25h[32mthen[39m(B[m[?25l[4d[?12l[?25h[?25l[?12l[?25h[8G[42m[1K [49m(B[m[?25l[?12l[?25h[1K e[?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25h(B[0;1m[34mecho[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h[32m([39m(B[m[?25l[?12l[?25h[32m([39m(B[m[?25l[?12l[?25h[32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$1[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h +[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$3[39m(B[m[?25l[?12l[?25h[32m)[39m(B[m[?25l[?12l[?25h[32m)[39m(B[m[?25l[5d[?12l[?25h[?25l[?12l[?25he[?25l[?12l[?25hl[?25l[?12l[?25hf[?25l[?12l[?25hi[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25hi[?25l[?12l[?25h[32melif[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m[[39m(B[m[?25l[?12l[?25h[32m][39m(B[m[?25l[?12l[?25h[?25l[?12l[?25h [32m][39m(B[m[?25l[?12l[?25h"[32m][39m(B[m[?25l[?12l[?25h[32m$][39m(B[m[?25l[?12l[?25h(B[0;1m[31m$2(B[0m[32m][39m(B[m[?25l[?12l[?25h[32m=][39m(B[m[?25l[?12l[?25h [32m][39m(B[m[?25l[?12l[?25h[32m][39m(B[m[K[?25l[?12l[?25h[32m][39m(B[m[K[?25l[?12l[?25h(B[0;1m[33m"$2"(B[0m[32m][39m(B[m[?25l[?12l[?25h [32m][39m(B[m[?25l[?12l[?25h[32m=][39m(B[m[?25l[?12l[?25h [32m][39m(B[m[?25l[?12l[?25h[32m$][39m(B[m[?25l[?12l[?25h"[32m][39m(B[m[?25l[?12l[?25h[32m][39m(B[m[K[?25l[?12l[?25h[32m][39m(B[m[K[?25l[?12l[?25h"[32m][39m(B[m[?25l[?12l[?25h-[32m][39m(B[m[?25l[?12l[?25h(B[0;1m[33m"-"(B[0m[32m][39m(B[m[?25l[?12l[?25h [32m][39m(B[m[?25l[?12l[?25h[C[?25l[6d[?12l[?25h[?25l[?12l[?25ht[?25l[?12l[?25hh[?25l[?12l[?25he[?25l[?12l[?25h[32mthen[39m(B[m[?25l[7d[?12l[?25h[?25l[?12l[?25h[8G[42m[1K [49m(B[m[?25l[?12l[?25h[1K e[?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25h(B[0;1m[34mecho[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h "[?25l[?12l[?25h[42m [49m(B[m[K[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h[32m([39m(B[m[?25l[?12l[?25h[32m([39m(B[m[?25l[?12l[?25h[32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$1[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h -[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$3[39m(B[m[?25l[?12l[?25h[32m)[39m(B[m[?25l[?12l[?25h[32m)[39m(B[m[?25l[8d[?12l[?25h[?25l[?12l[?25ho[?25l[?12l[?25h[K[?25l[?12l[?25he[?25l[?12l[?25hl[?25l[?12l[?25hi[?25l[?12l[?25h[32melif[39m(B[m[?25l[?12l[?25h[32m([39m(B[m[?25l[?12l[?25h [?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m[[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h "[?25l[?12l[?25h[32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$2[39m(B[m[?25l[?12l[?25h(B[0;1m[33m"$2"[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m=[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h "[?25l[?12l[?25h*[?25l[?12l[?25h(B[0;1m[33m"*"[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m][39m(B[m[?25l[9d[?12l[?25h[?25l[?12l[?25ht[?25l[?12l[?25hh[?25l[?12l[?25he[?25l[?12l[?25h[32mthen[39m(B[m[?25l[10d[?12l[?25h[?25l[?12l[?25h[8G[42m[1K [49m(B[m[?25l[?12l[?25h[1K e[?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25h(B[0;1m[34mecho[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h[32m([39m(B[m[?25l[?12l[?25h[32m([39m(B[m[?25l[?12l[?25h[32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$1[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h *[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$3[39m(B[m[?25l[?12l[?25h[32m)[39m(B[m[?25l[?12l[?25h[32m)[39m(B[m[?25l[11d[?12l[?25h[?25l[?12l[?25he[?25l[?12l[?25hl[?25l[?12l[?25hi[?25l[?12l[?25h[32melif[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m[[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h "[?25l[?12l[?25h[32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$2[39m(B[m[?25l[?12l[?25h(B[0;1m[33m"$2"[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m=[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h "[?25l[?12l[?25h/[?25l[?12l[?25h(B[0;1m[33m"/"[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m][39m(B[m[?25l[12d[?12l[?25h[?25l[?12l[?25ht[?25l[?12l[?25hj[?25l[?12l[?25he[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25hh[?25l[?12l[?25he[?25l[?12l[?25h[32mthen[39m(B[m[?25l[13d[?12l[?25h[?25l[?12l[?25h[8G[42m[1K [49m(B[m[?25l[?12l[?25h[1K e[?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25h(B[0;1m[34mecho[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h "[?25l[?12l[?25h[42m [49m(B[m[K[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h[32m([39m(B[m[?25l[?12l[?25h[32m([39m(B[m[?25l[?12l[?25h[32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$1[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h /[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$3[39m(B[m[?25l[?12l[?25h[32m)[39m(B[m[?25l[?12l[?25h[32m)[39m(B[m[?25l[14d[?12l[?25h[?25l[?12l[?25hf[?25l[?12l[?25h[32mfi[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: my_calculator.sh(B[m[?12l[?25h[?25l[22;32H[1K (B[0;7m[ Écriture... ](B[m[K[1;52H(B[0;7m [79G(B[m[22;30H(B[0;7m[ 13 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ ls
+[?2004l[0m[01;32mhello_bye.sh[0m  my_calculator.sh
+[?2004h]0;debian@debian: ~/JOB16[01;32mdebian@debian[00m:[01;34m~/JOB16[00m$ mk[K[Kcd ..
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ mkdir JOB17*
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ ls
+[?2004l [0m[01;34mBureau[0m      [01;34mImages[0m   [01;34mJOB13[0m   [01;34mJOB15[0m  [01;34m'JOB17*'[0m   [01;34mMusique[0m   [01;34mTéléchargements[0m
+ [01;34mDocuments[0m   [01;34mJOB12[0m    [01;34mJOB14[0m   [01;34mJOB16[0m   [01;34mModèles[0m   [01;34mPublic[0m    [01;34mVidéos[0m
+[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ rm -r Jo[KOB17\*/
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ mkdir JOB17
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ mb [K[Kv JOB16/my_calculator.sh JOB17/
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ cd JOB17*
+[?2004l[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ ls
+[?2004lmy_calculator.sh
+[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ chmod +x my_calculator.sh 
+[?2004l[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ ./my_calculator.sh 1 + 3
+[?2004l4
+[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ ./my_calculator.sh 1 + 3[1P 3- 3
+[?2004l-2
+[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ ./my_calculator.sh 1 - 3[K[K[K[K[K2 * 3
+[?2004l[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ nano my_calculator.sh 
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;29H(B[0;7m[ Lecture de 13 lignes ](B[m[H(B[0;7m  GNU nano 7.2                    my_calculator.sh                              [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[32mif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"+"[39m(B[m [32m][3dthen[4;9H(B[0;1m[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m + (B[0;1m[31m$3(B[0m[32m))[5delif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"-"[39m(B[m [32m][6dthen[7;9H(B[0;1m[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m - (B[0;1m[31m$3(B[0m[32m))[8delif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"*"[39m(B[m [32m][9dthen[10;9H(B[0;1m[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m * (B[0;1m[31m$3(B[0m[32m))[11delif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"/"[39m(B[m [32m][12dthen[13;9H(B[0;1m[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m / (B[0;1m[31m$3(B[0m[32m))[14dfi[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[A[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[1;52H(B[0;7m*[79G(B[m[10;21r[10;1HM[1;24r[10;1H[?12l[?25h[?25l[?12l[?25h[8G[42m[1K [49m(B[m[?25l[?12l[?25h[1K e[?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25h(B[0;1m[34mecho[39m(B[m[?25l[22d[K[?12l[?25h[10;13H[42m [49m(B[m[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$1[39m(B[m[?25l7[11;22r8[11dM[1;24r[11;1H[?12l[?25h[?25l[?12l[?25h[8G[42m[1K [49m(B[m[?25l[?12l[?25h[1K e[?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25h(B[0;1m[34mecho[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$3[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: my_calculator.sh(B[m[?12l[?25h[?25l[22;32H[1K (B[0;7m[ Écriture... ](B[m[K[1;52H(B[0;7m [79G(B[m[22;30H(B[0;7m[ 15 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ nano my_calculator.sh ./my_calculator.sh 2 * 3
+[?2004l[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ ./my_calculator.sh 2 * 3[K./my_calculator.sh 2 * 3[2Pnano my_calculator.sh 
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;29H(B[0;7m[ Lecture de 15 lignes ](B[m[H(B[0;7m  GNU nano 7.2                    my_calculator.sh                              [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[32mif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"+"[39m(B[m [32m][3dthen[4;9H(B[0;1m[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m + (B[0;1m[31m$3(B[0m[32m))[5delif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"-"[39m(B[m [32m][6dthen[7;9H(B[0;1m[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m - (B[0;1m[31m$3(B[0m[32m))[8delif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"*"[39m(B[m [32m][9dthen[10;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[31m$1[11;9H[34mecho[39m(B[m (B[0;1m[31m$3[12;9H[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m * (B[0;1m[31m$3(B[0m[32m))[13delif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"/"[39m(B[m [32m][14dthen[15;9H(B[0;1m[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m / (B[0;1m[31m$3(B[0m[32m))[16dfi[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[22d[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ nano my_calculator.sh ./my_calculator.sh 2 * 3[1P 3/ 3
+[?2004l0
+[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ ./my_calculator.sh 2 / 3[1P[1@4[2@^[[3@[2~[2@^[[2@[C[C[C[1P[1P[2P[1P[1P[1P[2P[C[C[C[C[K2
+[?2004l2
+[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ ./my_calculator.sh 4 / 2[1P 2* 2
+[?2004l[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ ./my_calculator.sh 4 * 2[1P 2x 2
+[?2004l[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ ./my_calculator.sh 4 x 2*[C[C/[C[C2 / 3[2Pnano my_calculator.sh 
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;29H(B[0;7m[ Lecture de 15 lignes ](B[m[H(B[0;7m  GNU nano 7.2                    my_calculator.sh                              [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[32mif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"+"[39m(B[m [32m][3dthen[4;9H(B[0;1m[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m + (B[0;1m[31m$3(B[0m[32m))[5delif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"-"[39m(B[m [32m][6dthen[7;9H(B[0;1m[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m - (B[0;1m[31m$3(B[0m[32m))[8delif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"*"[39m(B[m [32m][9dthen[10;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[31m$1[11;9H[34mecho[39m(B[m (B[0;1m[31m$3[12;9H[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m * (B[0;1m[31m$3(B[0m[32m))[13delif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"/"[39m(B[m [32m][14dthen[15;9H(B[0;1m[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m / (B[0;1m[31m$3(B[0m[32m))[16dfi[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[22d[K[?12l[?25h[8;15H[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[?25l[1;52H(B[0;7m*[79G(B[m[?12l[?25h[8;16H(B[0;1m[33m"[39m(B[m [32m][39m(B[m[K[?25l[?12l[?25h(B[0;1m[33mx"[39m(B[m [32m][39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: my_calculator.sh(B[m[?12l[?25h[?25l[22;32H[1K (B[0;7m[ Écriture... ](B[m[K[1;52H(B[0;7m [79G(B[m[22;30H(B[0;7m[ 15 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ nano my_calculator.sh ./my_calculator.sh 4 x 2
+[?2004l4
+2
+8
+[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ ./my_calculator.sh 4 x 2[2Pnano my_calculator.sh ./my_calculator.sh 4 x 2[2Pnano my_calculator.sh 
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;29H(B[0;7m[ Lecture de 15 lignes ](B[m[H(B[0;7m  GNU nano 7.2                    my_calculator.sh                              [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[32mif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"+"[39m(B[m [32m][3dthen[4;9H(B[0;1m[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m + (B[0;1m[31m$3(B[0m[32m))[5delif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"-"[39m(B[m [32m][6dthen[7;9H(B[0;1m[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m - (B[0;1m[31m$3(B[0m[32m))[8delif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"x"[39m(B[m [32m][9dthen[10;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[31m$1[11;9H[34mecho[39m(B[m (B[0;1m[31m$3[12;9H[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m * (B[0;1m[31m$3(B[0m[32m))[13delif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$2"[39m(B[m [32m=[39m(B[m (B[0;1m[33m"/"[39m(B[m [32m][14dthen[15;9H(B[0;1m[34mecho[39m(B[m [32m$(((B[0;1m[31m$1[39m(B[m / (B[0;1m[31m$3(B[0m[32m))[16dfi[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[11;16H[?25l[1;52H(B[0;7m*[79G(B[m[?12l[?25h[11;14H[32m$[39m(B[m[K[?25l[?12l[?25h[42m [49m(B[m[K[?25l[?12l[?25h [?25l[?12l[?25hech[K[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[42m[1K [49m(B[m [?25l[?12l[?25h[K[?25l[11;22r[22;1H
+[1;24r[21;1H[K[10;16H[?12l[?25h[?25l[?12l[?25h[32m$[39m(B[m[K[?25l[?12l[?25h[42m [49m(B[m[K[?25l[?12l[?25h [?25l[?12l[?25hech[K[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[42m[1K [49m(B[m [?25l[?12l[?25h[K[?25l[10;22r[22;1H
+[1;24r[9;5H[?12l[?25h[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: my_calculator.sh(B[m[?12l[?25h[?25l[22;32H[1K (B[0;7m[ Écriture... ](B[m[K[1;52H(B[0;7m [79G(B[m[22;30H(B[0;7m[ 13 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB17[01;32mdebian@debian[00m:[01;34m~/JOB17[00m$ cd ..
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ mkdir 1[KH+[K[KJOB18
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ cd JOB18
+[?2004l[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ nana myloop.sh
+[?2004lbash: nana : commande introuvable
+[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ nana myloop.sh[1P myloop.sho myloop.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;31H(B[0;7m[ Nouveau fichier ](B[m[H(B[0;7m  GNU nano 7.2                        myloop.sh                                 [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[?12l[?25h[?25l[1;49H(B[0;7m*[79G(B[m[?12l[?25h[2df[?25l[?12l[?25ho[?25l[?12l[?25h[32mfor[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h i[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h i[?25l[?12l[?25h[32min[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h 1[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h .[?25l[?12l[?25h.[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h 1[?25l[?12l[?25h0[?25l[?12l[?25h[32m:[39m(B[m[?25l[3d[?12l[?25h[?25l[?12l[?25h[8G[42m[1K [49m(B[m[?25l[22d[K[?12l[?25h[3;8H[1K e[?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25h(B[0;1m[34mecho[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [32m$[39m(B[m[?25l[?12l[?25h(B[0;1m[31m$1[39m(B[m[?25l[?12l[?25h[32m$[39m(B[m[K[?25l[?12l[?25h(B[0;1m[31m$i[39m(B[m[?25l[4d[?12l[?25h[?25l[?12l[?25hd[?25l[?12l[?25h[32mdo[39m(B[m[?25l[?12l[?25hdon[?25l[?12l[?25h[32mdone[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[2;5H[?25l[?12l[?25hi[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h1[?25l[?12l[?25h [?25l[?12l[?25h.[?25l[?12l[?25h.[?25l[?12l[?25h [?25l[?12l[?25h1[?25l[?12l[?25h0[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l7[3;22r8[3dM[1;24r[3;1H[?12l[?25h[?25l[?12l[?25hd[?25l[?12l[?25h[32mdo[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22;32H[1K (B[0;7m[ Écriture... ](B[m[K[1;49H(B[0;7m [79G(B[m[22;31H(B[0;7m[ 4 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ chmod +x myloop.sh 
+[?2004l[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ ./myu
+[?2004lbash: ./myu: Aucun fichier ou dossier de ce type
+[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ ./myu[Kloop.sh 
+[?2004l1
+..
+10
+[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ ./myloop.sh u[Kchmod +x myloop.sh [5Pnano myloop.sh*
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;29H(B[0;7m[ Lecture de 4 lignes ](B[m[H(B[0;7m  GNU nano 7.2                        myloop.sh                                 [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[32mfor[39m(B[m i [32min[39m(B[m 1 .. 10[3d[32mdo[4;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[31m$i[5d(B[0m[32mdone[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25hi[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h1[?25l[?12l[?25h[?25l[1;49H(B[0;7m*[79G(B[m[?12l[?25h[2;10H[32m{[39m(B[m1 .. 10[11G[?25l[?12l[?25h1[?25l[?12l[?25h [?25l[?12l[?25h.. 10[K[12G[?25l[?12l[?25h.[?25l[?12l[?25h . 10[?25l[?12l[?25h.[?25l[?12l[?25h [?25l[22d[K[?12l[?25h[2;15H10[K[?25l[?12l[?25h1[?25l[?12l[?25h0[?25l[?12l[?25h[32m}[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: myloop.sh(B[m[?12l[?25h[?25l[1K (B[0;7m[ Écriture... ](B[m[K[1;49H(B[0;7m [79G(B[m[22;31H(B[0;7m[ 4 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ nano myloop.sh*[3P./myloop.sh 
+[?2004l{1.
+.10}
+[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ ./myloop.sh nano myloop.sh*[K
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;29H(B[0;7m[ Lecture de 4 lignes ](B[m[H(B[0;7m  GNU nano 7.2                        myloop.sh                                 [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[32mfor[39m(B[m i [32min[39m(B[m [32m{[39m(B[m1. .10[32m}[3ddo[4;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[31m$i[5d(B[0m[32mdone[2d[39m(B[m[?12l[?25h[?25l[1;49H(B[0;7m*[79G(B[m7[2;21r8[2dM[1;24r[3;1H[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[36m#[39m(B[m[?25l[?12l[?25h[36m![39m(B[m[?25l[?12l[?25h[36m/[39m(B[m[?25l[?12l[?25h[36mb[39m(B[m[?25l[?12l[?25h[36mi[39m(B[m[?25l[?12l[?25h[36mn[39m(B[m[?25l[?12l[?25h[36m/[39m(B[m[?25l[?12l[?25h[36mb[39m(B[m[?25l[?12l[?25h[36ma[39m(B[m[?25l[?12l[?25h[36msh[39m(B[m[?25l7[3;21r8[3dM[1;24r[3;1H[?12l[?25h[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: myloop.sh(B[m[?12l[?25h[?25l[1K (B[0;7m[ Écriture... ](B[m[K[1;49H(B[0;7m [79G(B[m[22;31H(B[0;7m[ 6 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ nano myloop.sh[2P./myloop.sh 
+[?2004l{1.
+.10}
+[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ ./myloop.sh nano myloop.sh[2P./myloop.sh 
+[?2004l{1.
+.10}
+[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ ./myloop.sh nano myloop.sh[2P./myloop.sh nano myloop.sh*[K
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;29H(B[0;7m[ Lecture de 6 lignes ](B[m[H(B[0;7m  GNU nano 7.2                        myloop.sh                                 [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[36m#!/bin/bash[4d[32mfor[39m(B[m i [32min[39m(B[m [32m{[39m(B[m1. .10[32m}[5ddo[6;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[31m$i[7d(B[0m[32mdone[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25hi[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h1[?25l[?12l[?25h.[?25l[?12l[?25h [?25l[1;49H(B[0;7m*[79G(B[m[?12l[?25h[4;13H.10[32m}[39m(B[m[K[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: myloop.sh(B[m[?12l[?25h[?25l[1K (B[0;7m[ Écriture... ](B[m[K[1;49H(B[0;7m [79G(B[m[22;31H(B[0;7m[ 6 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ nano myloop.sh[2P./myloop.sh 
+[?2004l1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ ./myloop.sh nano myloop.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Lecture... ](B[m[22;29H(B[0;7m[ Lecture de 6 lignes ](B[m[H(B[0;7m  GNU nano 7.2                        myloop.sh                                 [1;79H(B[m[23d(B[0;7m^G(B[m Aide[14G(B[0;7m^O(B[m Écrire    (B[0;7m^W(B[m Chercher  (B[0;7m^K(B[m Couper    (B[0;7m^T(B[m Exécuter  (B[0;7m^C(B[m Emplacement[24d(B[0;7m^X(B[m Quitter   (B[0;7m^R(B[m Lire fich.(B[0;7m^\(B[m Remplacer (B[0;7m^U(B[m Coller    (B[0;7m^J(B[m Justifier (B[0;7m^/(B[m Aller ligne[2d[36m#!/bin/bash[4d[32mfor[39m(B[m i [32min[39m(B[m [32m{[39m(B[m1..10[32m}[5ddo[6;9H(B[0;1m[34mecho[39m(B[m (B[0;1m[31m$i[7d(B[0m[32mdone[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[A[?25l[1;49H(B[0;7m*[79G(B[m[3;21r[21;1H
+[1;24r[3;1H[?12l[?25h[?25l[3;21r[21;1H
+[1;24r[2;12H[36mfor i in {1..10}[2;12H[39m(B[m[?12l[?25h[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[32mfor[39m(B[m i [32min[39m(B[m [32m{[39m(B[m1..10[32m}[39m(B[m[K[?25l[?12l[?25h[?25l[?12l[?25h[?25l[22d[K[?12l[?25h[2d[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[A[?25l[?12l[?25h[4;9H[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[32m$[39m(B[m[K[?25l[?12l[?25h[42m [49m(B[m[K[?25l[?12l[?25h "[?25l[?12l[?25h(B[0;1m[33m""[39m(B[m[?25l[?12l[?25h[?25l[?12l[?25h(B[0;1m[33mJ"[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33ms"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mu"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m[?25l[?12l[?25h(B[0;1m[33ms"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33mu"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mn"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33ms"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mc"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mr"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mp"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mt"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33mq"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mu"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33ma"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mr"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mrr"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mv"[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33m)"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33mà"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33mf"[39m(B[m[?25l[?12l[?25h(B[0;1m[33ma"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mr"[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33mr"[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33mu"[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33mn"[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33mc"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m"[39m(B[m[K[?25l[?12l[?25h(B[0;1m[33mb"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mo"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mu"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mc"[39m(B[m[?25l[?12l[?25h(B[0;1m[33ml"[39m(B[m[?25l[?12l[?25h(B[0;1m[33me"[39m(B[m[?25l[?12l[?25h(B[0;1m[33m "[39m(B[m[?25l[?12l[?25h(B[0;1m[33m$"[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m[?25l[22d(B[0;7mSauver l'espace modifié ?                                                       [23;1H O(B[m Oui[K[24d(B[0;7m N(B[m Non          (B[0;7m^C(B[m Annuler[K[22d[?12l[?25h[?25l[23d(B[0;7m^G(B[m Aide[23;21H(B[0;7mM-D(B[m Format DOS[41G(B[0;7mM-A(B[m Ajout (à la fin)(B[0;7mM-B(B[m Copie de sécu.[24d(B[0;7m^C(B[m Annuler[17G    (B[0;7mM-M(B[m Format Mac[41G(B[0;7mM-P(B[m Ajout (au début)(B[0;7m^T(B[m Parcourir[22d(B[0;7mNom du fichier à écrire: myloop.sh(B[m[?12l[?25h[?25l[1K (B[0;7m[ Écriture... ](B[m[K[1;49H(B[0;7m [79G(B[m[22;31H(B[0;7m[ 4 lignes écrites ](B[m[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ nano myloop.sh[2P./myloop.sh 
+[?2004lJe suis un script qui arrive à faire une boucle 1
+Je suis un script qui arrive à faire une boucle 2
+Je suis un script qui arrive à faire une boucle 3
+Je suis un script qui arrive à faire une boucle 4
+Je suis un script qui arrive à faire une boucle 5
+Je suis un script qui arrive à faire une boucle 6
+Je suis un script qui arrive à faire une boucle 7
+Je suis un script qui arrive à faire une boucle 8
+Je suis un script qui arrive à faire une boucle 9
+Je suis un script qui arrive à faire une boucle 10
+[?2004h]0;debian@debian: ~/JOB18[01;32mdebian@debian[00m:[01;34m~/JOB18[00m$ cd ..
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ sudo apt install git
+[?2004l[sudo] Mot de passe de debian : 
+Lecture des listes de paquets… 0%Lecture des listes de paquets… 100%Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances… 0%Construction de l'arbre des dépendances… 0%Construction de l'arbre des dépendances… 50%Construction de l'arbre des dépendances… 50%Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état… 0%          Lecture des informations d'état… 0%Lecture des informations d'état... Fait
+Les paquets supplémentaires suivants seront installés : 
+  git-man liberror-perl patch
+Paquets suggérés :
+  git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui gitk gitweb
+  git-cvs git-mediawiki git-svn ed diffutils-doc
+Les NOUVEAUX paquets suivants seront installés :
+  git git-man liberror-perl patch
+0 mis à jour, 4 nouvellement installés, 0 à enlever et 0 non mis à jour.
+Il est nécessaire de prendre 9 377 ko dans les archives.
+Après cette opération, 48,0 Mo d'espace disque supplémentaires seront utilisés.
+Souhaitez-vous continuer ? [O/n] o O
+[33m0% [En cours][0m             Réception de :1 http://deb.debian.org/debian bookworm/main amd64 liberror-perl all 0.17029-2 [29,0 kB]
+[33m0% [1 liberror-perl 14,3 kB/29,0 kB 49%][0m[33m                                        5% [En cours][0m             Réception de :2 http://deb.debian.org/debian bookworm/main amd64 git-man all 1:2.39.2-1.1 [2 049 kB]
+[33m5% [2 git-man 5 440 B/2 049 kB 0%][0m[33m                                      11% [2 git-man 642 kB/2 049 kB 31%][0m[33m17% [2 git-man 1 346 kB/2 049 kB 66%][0m[33m23% [2 git-man 2 037 kB/2 049 kB 99%][0m[33m                                         28% [En cours][0m              Réception de :3 http://deb.debian.org/debian bookworm/main amd64 git amd64 1:2.39.2-1.1 [7 171 kB]
+[33m28% [3 git 0 B/7 171 kB 0%][0m[33m34% [3 git 761 kB/7 171 kB 11%][0m[33m38% [3 git 1 168 kB/7 171 kB 16%][0m[33m43% [3 git 1 749 kB/7 171 kB 24%][0m[33m47% [3 git 2 269 kB/7 171 kB 32%][0m[33m51% [3 git 2 784 kB/7 171 kB 39%][0m[33m56% [3 git 3 332 kB/7 171 kB 46%][0m[33m59% [3 git 3 714 kB/7 171 kB 52%][0m[33m60% [3 git 3 828 kB/7 171 kB 53%][0m[33m63% [3 git 4 164 kB/7 171 kB 58%]                               963 kB/s 3s[0m[33m65% [3 git 4 413 kB/7 171 kB 62%]                               963 kB/s 2s[0m[33m69% [3 git 4 794 kB/7 171 kB 67%]                               963 kB/s 2s[0m[33m73% [3 git 5 264 kB/7 171 kB 73%]                               963 kB/s 2s[0m[33m76% [3 git 5 691 kB/7 171 kB 79%]                               963 kB/s 1s[0m[33m79% [3 git 5 992 kB/7 171 kB 84%]                               963 kB/s 1s[0m[33m81% [3 git 6 217 kB/7 171 kB 87%]                               963 kB/s 1s[0m[33m82% [3 git 6 417 kB/7 171 kB 89%]                               963 kB/s 0s[0m[33m84% [3 git 6 581 kB/7 171 kB 92%]                               963 kB/s 0s[0m[33m86% [3 git 6 790 kB/7 171 kB 95%]                               963 kB/s 0s[0m[33m87% [3 git 6 956 kB/7 171 kB 97%]                               963 kB/s 0s[0m[33m89% [3 git 7 148 kB/7 171 kB 100%]                              963 kB/s 0s[0m[33m94% [En cours]                                                      963 kB/s 0s[0m                                                                               Réception de :4 http://deb.debian.org/debian bookworm/main amd64 patch amd64 2.7.6-7 [128 kB]
+[33m94% [4 patch 0 B/128 kB 0%]                                         963 kB/s 0s[0m[33m100% [En cours]                                                     512 kB/s 0s[0m                                                                               9 377 ko réceptionnés en 13s (744 ko/s)
+
+7[0;23r8[1ASélection du paquet liberror-perl précédemment désélectionné.
+(Lecture de la base de données... (Lecture de la base de données... 5%(Lecture de la base de données... 10%(Lecture de la base de données... 15%(Lecture de la base de données... 20%(Lecture de la base de données... 25%(Lecture de la base de données... 30%(Lecture de la base de données... 35%(Lecture de la base de données... 40%(Lecture de la base de données... 45%(Lecture de la base de données... 50%(Lecture de la base de données... 55%(Lecture de la base de données... 60%(Lecture de la base de données... 65%(Lecture de la base de données... 70%(Lecture de la base de données... 75%(Lecture de la base de données... 80%(Lecture de la base de données... 85%(Lecture de la base de données... 90%(Lecture de la base de données... 95%(Lecture de la base de données... 100%(Lecture de la base de données... 149944 fichiers et répertoires déjà installés.)
+Préparation du dépaquetage de .../liberror-perl_0.17029-2_all.deb ...
+7[24;0f[42m[30mProgression : [  0%][49m[39m [......................................................] 87[24;0f[42m[30mProgression : [  6%][49m[39m [###...................................................] 8Dépaquetage de liberror-perl (0.17029-2) ...
+7[24;0f[42m[30mProgression : [ 12%][49m[39m [######................................................] 8Sélection du paquet git-man précédemment désélectionné.
+Préparation du dépaquetage de .../git-man_1%3a2.39.2-1.1_all.deb ...
+7[24;0f[42m[30mProgression : [ 18%][49m[39m [#########.............................................] 8Dépaquetage de git-man (1:2.39.2-1.1) ...
+7[24;0f[42m[30mProgression : [ 24%][49m[39m [############..........................................] 8Sélection du paquet git précédemment désélectionné.
+Préparation du dépaquetage de .../git_1%3a2.39.2-1.1_amd64.deb ...
+7[24;0f[42m[30mProgression : [ 29%][49m[39m [###############.......................................] 8Dépaquetage de git (1:2.39.2-1.1) ...
+7[24;0f[42m[30mProgression : [ 35%][49m[39m [###################...................................] 8Sélection du paquet patch précédemment désélectionné.
+Préparation du dépaquetage de .../patch_2.7.6-7_amd64.deb ...
+7[24;0f[42m[30mProgression : [ 41%][49m[39m [######################................................] 8Dépaquetage de patch (2.7.6-7) ...
+7[24;0f[42m[30mProgression : [ 47%][49m[39m [#########################.............................] 8Paramétrage de liberror-perl (0.17029-2) ...
+7[24;0f[42m[30mProgression : [ 53%][49m[39m [############################..........................] 87[24;0f[42m[30mProgression : [ 59%][49m[39m [###############################.......................] 8Paramétrage de patch (2.7.6-7) ...
+7[24;0f[42m[30mProgression : [ 65%][49m[39m [##################################....................] 87[24;0f[42m[30mProgression : [ 71%][49m[39m [######################################................] 8Paramétrage de git-man (1:2.39.2-1.1) ...
+7[24;0f[42m[30mProgression : [ 76%][49m[39m [#########################################.............] 87[24;0f[42m[30mProgression : [ 82%][49m[39m [############################################..........] 8Paramétrage de git (1:2.39.2-1.1) ...
+7[24;0f[42m[30mProgression : [ 88%][49m[39m [###############################################.......] 87[24;0f[42m[30mProgression : [ 94%][49m[39m [##################################################....] 8Traitement des actions différées (« triggers ») pour man-db (2.11.2-2) ...
+
+7[0;24r8[1A[J[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ mkdir BashCeption
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ mv Jo[KOB1* BashCeption/
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ ls
+[?2004l[0m[01;34mBashCeption[0m  [01;34mDocuments[0m  [01;34mModèles[0m  [01;34mPublic[0m           [01;34mVidéos[0m
+[01;34mBureau[0m       [01;34mImages[0m     [01;34mMusique[0m  [01;34mTéléchargements[0m
+[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ cd BashCeption/
+[?2004l[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ ls
+[?2004l[0m[01;34mJOB12[0m  [01;34mJOB13[0m  [01;34mJOB14[0m  [01;34mJOB15[0m  [01;34mJOB16[0m  [01;34mJOB17[0m  [01;34mJOB18[0m
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ cd ..
+[?2004l[?2004h]0;debian@debian: ~[01;32mdebian@debian[00m:[01;34m~[00m$ cd BashCeption/
+[?2004l[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git push
+[?2004lfatal : ni ceci ni aucun de ses répertoires parents n'est un dépôt git : .git
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git commm[Kit
+[?2004lfatal : ni ceci ni aucun de ses répertoires parents n'est un dépôt git : .git
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git commit
+[?2004lfatal : ni ceci ni aucun de ses répertoires parents n'est un dépôt git : .git
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git init
+[?2004l[33mastuce: Utilisation de 'master' comme nom de la branche initiale. Le nom de la branche[m
+[33mastuce: par défaut peut changer. Pour configurer le nom de la branche initiale[m
+[33mastuce: pour tous les nouveaux dépôts, et supprimer cet avertissement, lancez :[m
+[33mastuce: [m
+[33mastuce: 	git config --global init.defaultBranch <nom>[m
+[33mastuce: [m
+[33mastuce: Les noms les plus utilisés à la place de 'master' sont 'main', 'trunk' et[m
+[33mastuce: 'development'. La branche nouvellement créée peut être rénommée avec :[m
+[33mastuce: [m
+[33mastuce: 	git branch -m <nom>[m
+Dépôt Git vide initialisé dans /home/debian/BashCeption/.git/
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ gitc[K commit
+[?2004lIdentité d'auteur inconnue
+
+*** Veuillez me dire qui vous êtes.
+
+Lancez
+
+  git config --global user.email "Vous@exemple.com"
+  git config --global user.name "Votre Nom"
+
+pour régler l'identité par défaut de votre compte.
+Éliminez --global pour ne faire les réglages que dans ce dépôt.
+
+fatal : impossible de détecter automatiquement l'adresse ('debian@debian.(none)' trouvé)
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config --global user.mail ""n"i"c"o"l"a"s"."d"u"h"a"m"e"l"@"m"l"a" [A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P"
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P"[1P"l"a"p" [A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl"a"t"e"f"o"r"m"e"."i"o"
+[?2004l[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config --gla[Kobal user.name ""N"i"c"o"l"a"s" "D"u"a"h"[1P"[1P"h"a"m"e"l"
+[?2004l[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git commot[K[Kit -am ""C"o"m"m"i"t" "d"e"s" "H"[1P"J"O"B" "1"2"[1P 12"[1P 12"o 12"b 12"s 12"[C[C[C "à" "1"8"
+[?2004lIdentité d'auteur inconnue
+
+*** Veuillez me dire qui vous êtes.
+
+Lancez
+
+  git config --global user.email "Vous@exemple.com"
+  git config --global user.name "Votre Nom"
+
+pour régler l'identité par défaut de votre compte.
+Éliminez --global pour ne faire les réglages que dans ce dépôt.
+
+fatal : impossible de détecter automatiquement l'adresse ('debian@debian.(none)' trouvé)
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config
+[?2004lusage : git config [<options>]
+
+Emplacement du fichier de configuration
+    --global              utiliser les fichier de configuration global
+    --system              utiliser le fichier de configuration du système
+    --local               utiliser le fichier de configuration du dépôt
+    --worktree            utiliser un fichier de configuration par arbre de travail
+    -f, --file <fichier>  utiliser le fichier de configuration spécifié
+    --blob <blob-id>      lire la configuration depuis l'objet blob fourni
+
+Action
+    --get                 obtenir la valeur : nom [motif-de-valeur]
+    --get-all             obtenir toutes les valeurs : clé [motif-de-valeur]
+    --get-regexp          obtenir les valeur pour la regexp : regex-de-nom [motif-de-valeur]
+    --get-urlmatch        obtenir la valeur spécifique pour l'URL : section[.var] URL
+    --replace-all         remplacer toutes les variables correspondant : nom valeur [motif-de-valeur]
+    --add                 ajouter une nouvelle variable : nom valeur
+    --unset               supprimer une variable : nom [motif-de-valeur]
+    --unset-all           supprimer toutes les correspondances nom [motif-de-valeur]
+    --rename-section      renommer une section : ancien-nom nouveau-nom
+    --remove-section      supprimer une section : nom
+    -l, --list            afficher tout
+    --fixed-value         utiliser l'égalité de chaînes lors de la comparaison de 'motif-de-valeur'
+    -e, --edit            ouvrir un éditeur
+    --get-color           trouver la couleur configurée : slot [par défaut]
+    --get-colorbool       trouver le réglage de la couleur : slot [stdout-est-tty]
+
+Type
+    -t, --type <type>     ce type est assigné à la valeur
+    --bool                la valeur est "true" (vrai) ou "false" (faux)
+    --int                 la valeur est un nombre décimal
+    --bool-or-int         la valeur est --bool ou --int
+    --bool-or-str         la valeur est --bool ou une chaîne
+    --path                la valeur est un chemin (vers un fichier ou un répertoire)
+    --expiry-date         la valeur est une date d'expiration
+
+Autre
+    -z, --null            terminer les valeurs avec un caractère NUL
+    --name-only           n'afficher que les noms de variable
+    --includes            respecter les directives d'inclusion lors de la recherche
+    --show-origin         afficher l'origine de la configuration (fichier, entrée standard, blob, ligne de commande)
+    --show-scope          afficher la portée de configuration (arbre de travail, local, global, système, commande)
+    --default <valeur>    avec --get, utiliser le valeur par défaut quand l'entrée n'existe pas
+
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config --get
+[?2004lerreur : mauvais nombre d'arguments, devrait être entre 1 et 2
+usage : git config [<options>]
+
+Emplacement du fichier de configuration
+    --global              utiliser les fichier de configuration global
+    --system              utiliser le fichier de configuration du système
+    --local               utiliser le fichier de configuration du dépôt
+    --worktree            utiliser un fichier de configuration par arbre de travail
+    -f, --file <fichier>  utiliser le fichier de configuration spécifié
+    --blob <blob-id>      lire la configuration depuis l'objet blob fourni
+
+Action
+    --get                 obtenir la valeur : nom [motif-de-valeur]
+    --get-all             obtenir toutes les valeurs : clé [motif-de-valeur]
+    --get-regexp          obtenir les valeur pour la regexp : regex-de-nom [motif-de-valeur]
+    --get-urlmatch        obtenir la valeur spécifique pour l'URL : section[.var] URL
+    --replace-all         remplacer toutes les variables correspondant : nom valeur [motif-de-valeur]
+    --add                 ajouter une nouvelle variable : nom valeur
+    --unset               supprimer une variable : nom [motif-de-valeur]
+    --unset-all           supprimer toutes les correspondances nom [motif-de-valeur]
+    --rename-section      renommer une section : ancien-nom nouveau-nom
+    --remove-section      supprimer une section : nom
+    -l, --list            afficher tout
+    --fixed-value         utiliser l'égalité de chaînes lors de la comparaison de 'motif-de-valeur'
+    -e, --edit            ouvrir un éditeur
+    --get-color           trouver la couleur configurée : slot [par défaut]
+    --get-colorbool       trouver le réglage de la couleur : slot [stdout-est-tty]
+
+Type
+    -t, --type <type>     ce type est assigné à la valeur
+    --bool                la valeur est "true" (vrai) ou "false" (faux)
+    --int                 la valeur est un nombre décimal
+    --bool-or-int         la valeur est --bool ou --int
+    --bool-or-str         la valeur est --bool ou une chaîne
+    --path                la valeur est un chemin (vers un fichier ou un répertoire)
+    --expiry-date         la valeur est une date d'expiration
+
+Autre
+    -z, --null            terminer les valeurs avec un caractère NUL
+    --name-only           n'afficher que les noms de variable
+    --includes            respecter les directives d'inclusion lors de la recherche
+    --show-origin         afficher l'origine de la configuration (fichier, entrée standard, blob, ligne de commande)
+    --show-scope          afficher la portée de configuration (arbre de travail, local, global, système, commande)
+    --default <valeur>    avec --get, utiliser le valeur par défaut quand l'entrée n'existe pas
+
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config --get user.mail
+[?2004lnicolas.duhamel@laplateforme.io
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config --get user.mail[K[Kmmit -am "Commit des Jobs 12 à 18"*
+[?2004lIdentité d'auteur inconnue
+
+*** Veuillez me dire qui vous êtes.
+
+Lancez
+
+  git config --global user.email "Vous@exemple.com"
+  git config --global user.name "Votre Nom"
+
+pour régler l'identité par défaut de votre compte.
+Éliminez --global pour ne faire les réglages que dans ce dépôt.
+
+fatal : impossible de détecter automatiquement l'adresse ('debian@debian.(none)' trouvé)
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git[K[K[Kgit commit -am "Commit des Jobs 12 à 18"*[15Pnfig --get user.mail[K[Kmmit -am "Commit des Jobs 12 à 18"nfig --global user.name "Nicolas Duhamel"mail "nicolas.duhamel@laplateforme.io"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuser.mail "nicolas.duhamel@laplat[1Peforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuser.mail "nicolas.duhamel@laplate[1Pforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuser.mail "nicolas.duhamel@laplatef[1Porme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuser.mail "nicolas.duhamel@laplatefo[1Prme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuser.mail "nicolas.duhamel@laplatefor[1Pme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuser.mail "nicolas.duhamel@laplateform[1Pe.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[Cuser.mail "nicolas.duhamel@laplateforme[1P.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[Cuser.mail "nicolas.duhamel@laplateforme.[1Pio"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[C[C[C[C[C[Cuser.mail "nicolas.duhamel@laplateforme.i[1Po"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config user.mail "nicolas.duhamel@laplateforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[10Pmmit -am "Commit des Jobs 12 à 18"*
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Pnfig --get user.mail[K[Kmmit -am "Commit des Jobs 12 à 18"nfig --global user.name "Nicolas Duhamel"[1P[1P[1P[1P[1P[1P[1P[1P[1P
+[?2004l[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config user.name "Nicolas Duhamel"mail "nicolas.duhamel@laplateforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[10Pmmit -am "Commit des Jobs 12 à 18"*
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lIdentité d'auteur inconnue
+
+*** Veuillez me dire qui vous êtes.
+
+Lancez
+
+  git config --global user.email "Vous@exemple.com"
+  git config --global user.name "Votre Nom"
+
+pour régler l'identité par défaut de votre compte.
+Éliminez --global pour ne faire les réglages que dans ce dépôt.
+
+fatal : impossible de détecter automatiquement l'adresse ('debian@debian.(none)' trouvé)
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git add .
+[?2004l[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git add .commit -am "Commit des Jobs 12 à 18"*
+[?2004lIdentité d'auteur inconnue
+
+*** Veuillez me dire qui vous êtes.
+
+Lancez
+
+  git config --global user.email "Vous@exemple.com"
+  git config --global user.name "Votre Nom"
+
+pour régler l'identité par défaut de votre compte.
+Éliminez --global pour ne faire les réglages que dans ce dépôt.
+
+fatal : impossible de détecter automatiquement l'adresse ('debian@debian.(none)' trouvé)
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git commit -am "Commit des Jobs 12 à 18"*[C[1P
+[?2004lIdentité d'auteur inconnue
+
+*** Veuillez me dire qui vous êtes.
+
+Lancez
+
+  git config --global user.email "Vous@exemple.com"
+  git config --global user.name "Votre Nom"
+
+pour régler l'identité par défaut de votre compte.
+Éliminez --global pour ne faire les réglages que dans ce dépôt.
+
+fatal : impossible de détecter automatiquement l'adresse ('debian@debian.(none)' trouvé)
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git condi[K[Kfig
+[?2004lusage : git config [<options>]
+
+Emplacement du fichier de configuration
+    --global              utiliser les fichier de configuration global
+    --system              utiliser le fichier de configuration du système
+    --local               utiliser le fichier de configuration du dépôt
+    --worktree            utiliser un fichier de configuration par arbre de travail
+    -f, --file <fichier>  utiliser le fichier de configuration spécifié
+    --blob <blob-id>      lire la configuration depuis l'objet blob fourni
+
+Action
+    --get                 obtenir la valeur : nom [motif-de-valeur]
+    --get-all             obtenir toutes les valeurs : clé [motif-de-valeur]
+    --get-regexp          obtenir les valeur pour la regexp : regex-de-nom [motif-de-valeur]
+    --get-urlmatch        obtenir la valeur spécifique pour l'URL : section[.var] URL
+    --replace-all         remplacer toutes les variables correspondant : nom valeur [motif-de-valeur]
+    --add                 ajouter une nouvelle variable : nom valeur
+    --unset               supprimer une variable : nom [motif-de-valeur]
+    --unset-all           supprimer toutes les correspondances nom [motif-de-valeur]
+    --rename-section      renommer une section : ancien-nom nouveau-nom
+    --remove-section      supprimer une section : nom
+    -l, --list            afficher tout
+    --fixed-value         utiliser l'égalité de chaînes lors de la comparaison de 'motif-de-valeur'
+    -e, --edit            ouvrir un éditeur
+    --get-color           trouver la couleur configurée : slot [par défaut]
+    --get-colorbool       trouver le réglage de la couleur : slot [stdout-est-tty]
+
+Type
+    -t, --type <type>     ce type est assigné à la valeur
+    --bool                la valeur est "true" (vrai) ou "false" (faux)
+    --int                 la valeur est un nombre décimal
+    --bool-or-int         la valeur est --bool ou --int
+    --bool-or-str         la valeur est --bool ou une chaîne
+    --path                la valeur est un chemin (vers un fichier ou un répertoire)
+    --expiry-date         la valeur est une date d'expiration
+
+Autre
+    -z, --null            terminer les valeurs avec un caractère NUL
+    --name-only           n'afficher que les noms de variable
+    --includes            respecter les directives d'inclusion lors de la recherche
+    --show-origin         afficher l'origine de la configuration (fichier, entrée standard, blob, ligne de commande)
+    --show-scope          afficher la portée de configuration (arbre de travail, local, global, système, commande)
+    --default <valeur>    avec --get, utiliser le valeur par défaut quand l'entrée n'existe pas
+
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ ls
+[?2004l[0m[01;34mJOB12[0m  [01;34mJOB13[0m  [01;34mJOB14[0m  [01;34mJOB15[0m  [01;34mJOB16[0m  [01;34mJOB17[0m  [01;34mJOB18[0m
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ ls -al
+[?2004ltotal 40
+drwxr-xr-x 10 debian debian 4096 13 mars  10:30 [0m[01;34m.[0m
+drwx------ 16 debian debian 4096 13 mars  10:31 [01;34m..[0m
+drwxr-xr-x  7 debian debian 4096 13 mars  10:35 [01;34m.git[0m
+drwxr-xr-x  2 debian debian 4096 13 mars  09:46 [01;34mJOB12[0m
+drwxr-xr-x  2 debian debian 4096 13 mars  09:48 [01;34mJOB13[0m
+drwxr-xr-x  2 debian debian 4096 13 mars  09:51 [01;34mJOB14[0m
+drwxr-xr-x  2 debian debian 4096 13 mars  09:54 [01;34mJOB15[0m
+drwxr-xr-x  2 debian debian 4096 13 mars  10:04 [01;34mJOB16[0m
+drwxr-xr-x  2 debian debian 4096 13 mars  10:07 [01;34mJOB17[0m
+drwxr-xr-x  2 debian debian 4096 13 mars  10:19 [01;34mJOB18[0m
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ cd .git
+[?2004l[?2004h]0;debian@debian: ~/BashCeption/.git[01;32mdebian@debian[00m:[01;34m~/BashCeption/.git[00m$ ls
+[?2004l[0m[01;34mbranches[0m  config  description  HEAD  [01;34mhooks[0m  index  [01;34minfo[0m  [01;34mobjects[0m  [01;34mrefs[0m
+[?2004h]0;debian@debian: ~/BashCeption/.git[01;32mdebian@debian[00m:[01;34m~/BashCeption/.git[00m$ cat config 
+[?2004l[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[user]
+	mail = nicolas.duhamel@laplateforme.io
+	name = Nicolas Duhamel
+[?2004h]0;debian@debian: ~/BashCeption/.git[01;32mdebian@debian[00m:[01;34m~/BashCeption/.git[00m$ cd ..
+[?2004l[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ cd ..at config ls[Kcd .git[1Pls -al[Kgit configmmit -m "Commit des Jobs 12 à 18"*[K
+[?2004lIdentité d'auteur inconnue
+
+*** Veuillez me dire qui vous êtes.
+
+Lancez
+
+  git config --global user.email "Vous@exemple.com"
+  git config --global user.name "Votre Nom"
+
+pour régler l'identité par défaut de votre compte.
+Éliminez --global pour ne faire les réglages que dans ce dépôt.
+
+fatal : impossible de détecter automatiquement l'adresse ('debian@debian.(none)' trouvé)
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ cat .git/config 
+[?2004l[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[user]
+	mail = nicolas.duhamel@laplateforme.io
+	name = Nicolas Duhamel
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ got [K[K[Kit config --g[K[K[K[K
+[?2004lusage : git config [<options>]
+
+Emplacement du fichier de configuration
+    --global              utiliser les fichier de configuration global
+    --system              utiliser le fichier de configuration du système
+    --local               utiliser le fichier de configuration du dépôt
+    --worktree            utiliser un fichier de configuration par arbre de travail
+    -f, --file <fichier>  utiliser le fichier de configuration spécifié
+    --blob <blob-id>      lire la configuration depuis l'objet blob fourni
+
+Action
+    --get                 obtenir la valeur : nom [motif-de-valeur]
+    --get-all             obtenir toutes les valeurs : clé [motif-de-valeur]
+    --get-regexp          obtenir les valeur pour la regexp : regex-de-nom [motif-de-valeur]
+    --get-urlmatch        obtenir la valeur spécifique pour l'URL : section[.var] URL
+    --replace-all         remplacer toutes les variables correspondant : nom valeur [motif-de-valeur]
+    --add                 ajouter une nouvelle variable : nom valeur
+    --unset               supprimer une variable : nom [motif-de-valeur]
+    --unset-all           supprimer toutes les correspondances nom [motif-de-valeur]
+    --rename-section      renommer une section : ancien-nom nouveau-nom
+    --remove-section      supprimer une section : nom
+    -l, --list            afficher tout
+    --fixed-value         utiliser l'égalité de chaînes lors de la comparaison de 'motif-de-valeur'
+    -e, --edit            ouvrir un éditeur
+    --get-color           trouver la couleur configurée : slot [par défaut]
+    --get-colorbool       trouver le réglage de la couleur : slot [stdout-est-tty]
+
+Type
+    -t, --type <type>     ce type est assigné à la valeur
+    --bool                la valeur est "true" (vrai) ou "false" (faux)
+    --int                 la valeur est un nombre décimal
+    --bool-or-int         la valeur est --bool ou --int
+    --bool-or-str         la valeur est --bool ou une chaîne
+    --path                la valeur est un chemin (vers un fichier ou un répertoire)
+    --expiry-date         la valeur est une date d'expiration
+
+Autre
+    -z, --null            terminer les valeurs avec un caractère NUL
+    --name-only           n'afficher que les noms de variable
+    --includes            respecter les directives d'inclusion lors de la recherche
+    --show-origin         afficher l'origine de la configuration (fichier, entrée standard, blob, ligne de commande)
+    --show-scope          afficher la portée de configuration (arbre de travail, local, global, système, commande)
+    --default <valeur>    avec --get, utiliser le valeur par défaut quand l'entrée n'existe pas
+
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config --get-all
+[?2004l[?1h=erreur : mauvais nombre d'arguments, devrait être entre 1 et 2[m
+usage : git config [<options>][m
+[m
+Emplacement du fichier de configuration[m
+    --global              utiliser les fichier de configuration global[m
+    --system              utiliser le fichier de configuration du système[m
+    --local               utiliser le fichier de configuration du dépôt[m
+    --worktree            utiliser un fichier de configuration par arbre de trav[m ail[m
+    -f, --file <fichier>  utiliser le fichier de configuration spécifié[m
+    --blob <blob-id>      lire la configuration depuis l'objet blob fourni[m
+[m
+Action[m
+    --get                 obtenir la valeur : nom [motif-de-valeur][m
+    --get-all             obtenir toutes les valeurs : clé [motif-de-valeur][m
+    --get-regexp          obtenir les valeur pour la regexp : regex-de-nom [moti[m f-de-valeur][m
+    --get-urlmatch        obtenir la valeur spécifique pour l'URL : section[.var[m ] URL[m
+    --replace-all         remplacer toutes les variables correspondant : nom val[m eur [motif-de-valeur][m
+    --add                 ajouter une nouvelle variable : nom valeur[m
+    --unset               supprimer une variable : nom [motif-de-valeur][m
+:[K[K    --unset-all           supprimer toutes les correspondances nom [motif-de-val[m :[K[K[?1l>[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config --get-all *
+[?2004l[?1h=erreur : mauvais nombre d'arguments, devrait être entre 1 et 2[m
+usage : git config [<options>][m
+[m
+Emplacement du fichier de configuration[m
+    --global              utiliser les fichier de configuration global[m
+    --system              utiliser le fichier de configuration du système[m
+    --local               utiliser le fichier de configuration du dépôt[m
+    --worktree            utiliser un fichier de configuration par arbre de trav[m ail[m
+    -f, --file <fichier>  utiliser le fichier de configuration spécifié[m
+    --blob <blob-id>      lire la configuration depuis l'objet blob fourni[m
+[m
+Action[m
+    --get                 obtenir la valeur : nom [motif-de-valeur][m
+    --get-all             obtenir toutes les valeurs : clé [motif-de-valeur][m
+    --get-regexp          obtenir les valeur pour la regexp : regex-de-nom [moti[m f-de-valeur][m
+    --get-urlmatch        obtenir la valeur spécifique pour l'URL : section[.var[m ] URL[m
+    --replace-all         remplacer toutes les variables correspondant : nom val[m eur [motif-de-valeur][m
+    --add                 ajouter une nouvelle variable : nom valeur[m
+    --unset               supprimer une variable : nom [motif-de-valeur][m
+:[K[K[?1l>[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config --get-all *[Kname
+[?2004l[?1h=erreur : la clé ne contient pas de section: name[m
+[K[?1l>[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config --get-all name[K[K[K[Kuser
+[?2004l[?1h=erreur : la clé ne contient pas de section: user[m
+[K[?1l>[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config --get-all username*[K[K[Kcat .git/config git commit -m "Commit des Jobs 12 à 18"
+[?2004lIdentité d'auteur inconnue
+
+*** Veuillez me dire qui vous êtes.
+
+Lancez
+
+  git config --global user.email "Vous@exemple.com"
+  git config --global user.name "Votre Nom"
+
+pour régler l'identité par défaut de votre compte.
+Éliminez --global pour ne faire les réglages que dans ce dépôt.
+
+fatal : impossible de détecter automatiquement l'adresse ('debian@debian.(none)' trouvé)
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git commit -m "Commit des Jobs 12 à 18"[14Pnfig --get-all username*[K[K[Kcat .git/config git commit -m "Commit des Jobs 12 à 18"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Pcat .git/config 
+[?2004l[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[user]
+	mail = nicolas.duhamel@laplateforme.io
+	name = Nicolas Duhamel
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ cat .git/config git commit -m "Commit des Jobs 12 à 18"[14Pnfig --get-all username*[K[K[Kcat .git/config git commit -m "Commit des Jobs 12 à 18"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ..[Kat config ls[Kcd .git[1Pls -al[Kgit configmmit -m "Commit des Jobs 12 à 18"*[1@a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kcommit -am "Commit des Jobs 12 à 18"*[3Pnfig user.name "Nicolas Duhamel"mail "nicolas.duhamel@laplateforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[10Pmmit -am "Commit des Jobs 12 à 18"*
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Pnfig --get user.mail[K[Kmmit -am "Commit des Jobs 12 à 18"nfig --global user.name "Nicolas Duhamel"mail "nicolas.duhamel@laplateforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[Cmmit[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnfig --global user.mail "nicolas.duhamel@laplateforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pname "Nicolas Duhamel"
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"n"i"c"o"l"a"s"."mail "nicolas.duhamel@laplateforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[Cmmit[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnfig --global user.mail "nicolas.duhamel@laplateforme.io"
+[?2004l[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config --global user.mail "nicolas.duhamel@laplateforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ cat .git/config [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit commit -m "Commit des Jobs 12 à 18"[14Pnfig --get-all username*[K[K[Kcat .git/config git commit -m "Commit des Jobs 12 à 18"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ..[Kgit commit -m "Commit des Jobs 12 à 18"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Pcat .git/config [6Pgit config --get-all *nameusermmit -m "Commit des Jobs 12 à 18"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Pcat .git/config git config --global user.mail "nicolas.duhamel@laplateforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit config --global user.mail "nicolas.duhamel@laplateforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ cat .git/config [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit config --global user.mail "nicolas.duhamel@laplateforme.io"[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kname ""n"i"c"o"l"a"s"-"d"u"h"a"m"e"l"
+[?2004l[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config --global user.name "nicolas-duhamel"mail "nicolas.duhamel@laplateforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ cat .git/config [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit commit -m "Commit des Jobs 12 à 18"[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kadd .[K.
+[?2004l[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git add .config --global user.name "nicolas-duhamel"mail "nicolas.duhamel@laplateforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ cat .git/config [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit commit -m "Commit des Jobs 12 à 18"[14Pnfig --get-all usermmit -m "Commit des Jobs 12 à 18"
+[?2004lIdentité d'auteur inconnue
+
+*** Veuillez me dire qui vous êtes.
+
+Lancez
+
+  git config --global user.email "Vous@exemple.com"
+  git config --global user.name "Votre Nom"
+
+pour régler l'identité par défaut de votre compte.
+Éliminez --global pour ne faire les réglages que dans ce dépôt.
+
+fatal : impossible de détecter automatiquement l'adresse ('debian@debian.(none)' trouvé)
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ cat .go[Kit/config 
+[?2004l[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[user]
+	mail = nicolas.duhamel@laplateforme.io
+	name = Nicolas Duhamel
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ cat .git/config git commit -m "Commit des Jobs 12 à 18"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kconfig --global user.name "nicolas-duhamel"mail "nicolas.duhamel@laplateforme.io"[A]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pname "nicolas-duhamel"
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P
+[?2004l[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ git config user.name "nicolas-duhamel"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kgit config user.name "nicolas-duhamel"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[22Pcat .git/config git commit -m "Commit des Jobs 12 à 18"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Pcat .git/config 
+[?2004l[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[user]
+	mail = nicolas.duhamel@laplateforme.io
+	name = nicolas-duhamel
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ cat .git/config git config user.name "nicolas-duhamel"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[22Pcat .git/config git commit -m "Commit des Jobs 12 à 18"
+[?2004l^[[HIdentité d'auteur inconnue
+
+*** Veuillez me dire qui vous êtes.
+
+Lancez
+
+  git config --global user.email "Vous@exemple.com"
+  git config --global user.name "Votre Nom"
+
+pour régler l'identité par défaut de votre compte.
+Éliminez --global pour ne faire les réglages que dans ce dépôt.
+
+fatal : impossible de détecter automatiquement l'adresse ('debian@debian.(none)' trouvé)
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ ping google.fr
+[?2004lPING google.fr (172.217.18.195) 56(84) bytes of data.
+64 bytes from ham02s14-in-f195.1e100.net (172.217.18.195): icmp_seq=1 ttl=128 time=71.2 ms
+64 bytes from par10s38-in-f3.1e100.net (172.217.18.195): icmp_seq=2 ttl=128 time=71.0 ms
+64 bytes from ham02s14-in-f195.1e100.net (172.217.18.195): icmp_seq=3 ttl=128 time=70.1 ms
+^C
+--- google.fr ping statistics ---
+4 packets transmitted, 3 received, 25% packet loss, time 3007ms
+rtt min/avg/max/mdev = 70.089/70.740/71.157/0.466 ms
+[?2004h]0;debian@debian: ~/BashCeption[01;32mdebian@debian[00m:[01;34m~/BashCeption[00m$ rm -r .git/
+[?2004lrm : supprimer '.git/objects/f1/6bca78ce58b79a344317158db1e72dd7bb4555' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/f1': Le dossier n'est pas vide
+rm : supprimer '.git/objects/26/7ac4a7daba0b2230d019435868a09294f65fbb' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/26': Le dossier n'est pas vide
+rm : supprimer '.git/objects/ff/58e04121121498720a9910058f9dcd3e48d93d' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/ff': Le dossier n'est pas vide
+rm : supprimer '.git/objects/e9/717ddd02494aa018dc5bca544b44afb98d4808' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/e9': Le dossier n'est pas vide
+rm : supprimer '.git/objects/9a/bbd3e483182ed2d9e1f15a2e66def1a92ada1b' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/9a': Le dossier n'est pas vide
+rm : supprimer '.git/objects/db/9544f7f00b5371ac6fd92be419aa3b8299e455' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/db': Le dossier n'est pas vide
+rm : supprimer '.git/objects/fb/ffc0faad8e7888ca573ad2d4253d01c5208b50' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/fb': Le dossier n'est pas vide
+rm : supprimer '.git/objects/1a/f3b01424b9f18ce0643fa4ec2e211ac03975eb' qui est protégé en écriture et est du type « fichier » ? 
+rm : supprimer '.git/objects/1a/edcb867a287bc95b43d2fbcd145e93291a3775' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/1a': Le dossier n'est pas vide
+rm : supprimer '.git/objects/4b/825dc642cb6eb9a060e54bf8d69288fbee4904' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/4b': Le dossier n'est pas vide
+rm : supprimer '.git/objects/c0/2e30b4610da5b8c898fee1425491182f46e391' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/c0': Le dossier n'est pas vide
+rm : supprimer '.git/objects/b7/cc4f28d7a54094f1a414f749aba1e2ce1a7eb7' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/b7': Le dossier n'est pas vide
+rm : supprimer '.git/objects/01/ddff9ece7ef9b7812fbb16f9a9eccc5ef89c98' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/01': Le dossier n'est pas vide
+rm : supprimer '.git/objects/16/7c2b3a6f986ae821dc74762bc3ec8d65eac2d3' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/16': Le dossier n'est pas vide
+rm : supprimer '.git/objects/c9/44acc3365bc8a70cf994dcc07d8b3ec8fa9d84' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/c9': Le dossier n'est pas vide
+rm : supprimer '.git/objects/cd/4aeab681aef5d8ec18ceb2b7db94ba4dafcfd9' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/cd': Le dossier n'est pas vide
+rm : supprimer '.git/objects/f2/7f0634cbf15f2e1df43e084f86d011ef9fd6b1' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/f2': Le dossier n'est pas vide
+rm : supprimer '.git/objects/aa/0f4a397152cf49d8365918cdb3be99d645eb2a' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/aa': Le dossier n'est pas vide
+rm : supprimer '.git/objects/65/7460f39d918d55d09223e0b1f7b028e41096b6' qui est protégé en écriture et est du type « fichier » ? 
+rm: impossible de supprimer '.git/objects/65': Le dossier n'est pas vide
+rm : supprimer
